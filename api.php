@@ -25,6 +25,7 @@ function jwrite(string $f, $d): void {
     if (@file_put_contents($t, json_encode($d, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT), LOCK_EX) === false) out(['error' => 'Could not save. Please make the "data" folder writable (permission 755 or 775).'], 500);
     rename($t, $f);
 }
+function jsoft(string $f, $d): void { @file_put_contents($f, json_encode($d), LOCK_EX); } // login log: never block a login if the folder is read-only
 function clean($s, int $max): string { $s = trim(strip_tags((string)$s)); $s = preg_replace('/[\x00-\x08\x0B\x0C\x0E-\x1F]/', '', $s); return mb_substr($s, 0, $max); }
 
 $PRODUCTS = $DATA . '/products.json';
@@ -61,7 +62,7 @@ if ($action === 'login') {
     $f  = $DATA . '/attempts.json';
     $att = jread($f, []);
     foreach ($att as $k => $v) if (time() - ($v['t'] ?? 0) > 900) unset($att[$k]);
-    if (($att[$ip]['n'] ?? 0) >= 5) { jwrite($f, $att); out(['error' => 'Too many wrong attempts. Please try again after 15 minutes.'], 429); }
+    if (($att[$ip]['n'] ?? 0) >= 5) { jsoft($f, $att); out(['error' => 'Too many wrong attempts. Please try again after 15 minutes.'], 429); }
     $cfg = is_file($CONFIG) ? include $CONFIG : null;
     $ok = false;
     if (is_array($cfg)) {
@@ -71,11 +72,11 @@ if ($action === 'login') {
     }
     if (!$ok) {
         $att[$ip] = ['n' => ($att[$ip]['n'] ?? 0) + 1, 't' => time()];
-        jwrite($f, $att);
+        jsoft($f, $att);
         usleep(500000);
         out(['error' => 'Incorrect ID or password.'], 401);
     }
-    unset($att[$ip]); jwrite($f, $att);
+    unset($att[$ip]); jsoft($f, $att);
     session_regenerate_id(true);
     $_SESSION['admin'] = true;
     $_SESSION['csrf']  = bin2hex(random_bytes(16));
