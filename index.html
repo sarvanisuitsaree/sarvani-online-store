@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sarvani Suit & Saree – Murlipura, Jaipur</title>
-<meta name="description" content="Sarvani Suit & Saree, Murlipura, Jaipur – traditional and designer sarees, suits, lehariya prints, cotton and silk fabrics and blouses. Order on WhatsApp.">
-<meta property="og:title" content="Sarvani Suit & Saree – Jaipur">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Sarvani Suit &amp; Saree – Jaipur</title>
+<meta name="description" content="Sarvani Suit &amp; Saree, Murlipura, Jaipur – traditional and designer sarees, suits, lehariya prints, cotton and silk fabrics and blouses. Order on WhatsApp.">
+<meta property="og:title" content="Sarvani Suit &amp; Saree – Jaipur">
 <meta property="og:description" content="Elegant suits and sarees. Order instantly on WhatsApp.">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#6b1d2f">
@@ -28,7 +28,7 @@ a{color:inherit}
 h1,h2,h3{font-family:var(--serif);font-weight:600;letter-spacing:.01em;line-height:1.15}
 
 /* header */
-header{position:sticky;top:0;z-index:50;background:rgba(251,247,240,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(251,247,240,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 .nav{display:flex;align-items:center;justify-content:space-between;height:72px;gap:16px}
 .logo{font-family:var(--serif);font-size:32px;letter-spacing:.22em;color:var(--maroon);text-decoration:none;font-weight:700;display:flex;flex-direction:column;line-height:1}
 .logo small{font-family:var(--sans);font-size:9px;letter-spacing:.42em;color:var(--gold);font-weight:600;margin-top:6px;padding-left:2px}
@@ -131,7 +131,7 @@ footer button{margin-top:18px;font-size:11px;letter-spacing:.2em;text-transform:
 footer button:hover{opacity:1;border-color:currentColor}
 
 /* floating whatsapp */
-.fab{position:fixed;right:18px;bottom:18px;z-index:40;width:58px;height:58px;border-radius:50%;background:var(--wa);display:flex;align-items:center;justify-content:center;box-shadow:0 10px 26px -6px rgba(0,0,0,.4);transition:.2s}
+.fab{position:fixed;right:calc(18px + env(safe-area-inset-right,0px));bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:40;width:58px;height:58px;border-radius:50%;background:var(--wa);display:flex;align-items:center;justify-content:center;box-shadow:0 10px 26px -6px rgba(0,0,0,.4);transition:.2s}
 .fab:hover{transform:scale(1.08)}
 .fab svg{width:30px;height:30px;fill:#fff}
 
@@ -202,10 +202,10 @@ body.is-admin .adminbar{display:block}
 .adminbar .wrap{display:flex;justify-content:space-between;align-items:center;padding:8px 0;gap:10px;flex-wrap:wrap}
 .adminbar button{color:var(--gold-l);text-transform:uppercase;letter-spacing:.14em;font-size:11px;margin-left:16px}
 .loading{text-align:center;padding:60px;color:var(--muted);grid-column:1/-1}
+[hidden]{display:none!important}
 </style>
 </head>
 <body>
-
 <div class="adminbar"><div class="wrap"><span>● You are logged in as Admin — only you can see this bar</span><span><button id="abDash">Open Dashboard</button><button id="abOut">Log out</button></span></div></div>
 
 <header>
@@ -288,7 +288,7 @@ body.is-admin .adminbar{display:block}
 <div class="ov" id="ovLogin"><div class="modal login"><button class="x" data-close>×</button>
   <h2>Admin Login</h2><p>Only the shop owner can sign in here.</p>
   <form id="loginForm" autocomplete="on">
-    <label class="f" for="lid">Admin ID</label><input type="text" id="lid" name="username" autocomplete="username" autocapitalize="none" required>
+    <label class="f" for="lid">Admin Email</label><input type="email" id="lid" name="username" autocomplete="username" autocapitalize="none" required>
     <label class="f" for="lpw">Password</label><input type="password" id="lpw" name="password" autocomplete="current-password" required>
     <div class="err" id="loginErr"></div>
     <button class="btn btn-maroon" style="width:100%;margin-top:8px" type="submit" id="loginBtn">Sign In</button>
@@ -302,7 +302,7 @@ body.is-admin .adminbar{display:block}
     <button data-tab="list" class="on">Products</button>
     <button data-tab="edit">Add / Edit Product</button>
     <button data-tab="settings">Shop Settings</button>
-    <button data-tab="account">ID &amp; Password</button>
+    <button data-tab="account">Password</button>
   </div>
 
   <div id="tab-list"></div>
@@ -351,13 +351,12 @@ body.is-admin .adminbar{display:block}
 
   <div id="tab-account" hidden>
     <form id="pwForm" autocomplete="off">
-      <p style="color:var(--muted);font-size:14px">Please change the first password you received. Use at least 10 characters.</p>
+      <p style="color:var(--muted);font-size:14px">Choose a strong password of at least 10 characters.</p>
       <label class="f">Current password</label><input type="password" id="pwCur" autocomplete="current-password" required>
-      <label class="f">New Admin ID (optional)</label><input type="text" id="pwId" autocapitalize="none" placeholder="Leave empty to keep the same ID">
       <label class="f">New password</label><input type="password" id="pwNew" autocomplete="new-password" required minlength="10">
       <label class="f">Repeat new password</label><input type="password" id="pwNew2" autocomplete="new-password" required minlength="10">
       <div class="err" id="pwErr"></div>
-      <div class="formbar"><button type="submit" class="btn btn-maroon">Update ID &amp; Password</button></div>
+      <div class="formbar"><button type="submit" class="btn btn-maroon">Update Password</button></div>
     </form>
   </div>
 </div></div>
@@ -365,30 +364,149 @@ body.is-admin .adminbar{display:block}
 <div class="ov" id="ovConfirm"><div class="modal login" style="width:min(380px,100%)"><button class="x" data-close>×</button><p id="cfMsg" style="text-align:center;margin:18px 0 22px;font-size:16px"></p><div class="formbar" style="justify-content:center;margin-top:0"><button type="button" class="btn btn-ghost btn-sm" id="cfNo">Cancel</button><button type="button" class="btn btn-danger btn-sm" id="cfYes">Delete</button></div></div></div>
 <div class="toast" id="toast"></div>
 
+<script src="config.js"></script>
+<script src="vendor/supabase.js"></script>
 <script>
 (function(){
 'use strict';
-var API='api.php';
 var S={products:[],settings:{},cat:'All',admin:false,csrf:null,form:{sizes:[],items:[]}};
 var $=function(s,r){return (r||document).querySelector(s)};
 var $$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
 function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
 function money(n){return '₹'+Number(n).toLocaleString('en-IN')}
 function toast(m){var t=$('#toast');t.textContent=m;t.classList.add('show');clearTimeout(toast._t);toast._t=setTimeout(function(){t.classList.remove('show')},2600)}
-function img(n){return 'uploads/'+encodeURIComponent(n)}
+function img(n){return n}
 
-async function api(action,opts){
-  opts=opts||{};
-  var h={};
-  if(S.csrf)h['X-CSRF-Token']=S.csrf;
-  var init={method:opts.body!==undefined?'POST':'GET',credentials:'same-origin',headers:h};
-  if(opts.body instanceof FormData)init.body=opts.body;
-  else if(opts.body!==undefined){init.body=JSON.stringify(opts.body);h['Content-Type']='application/json'}
-  var r=await fetch(API+'?action='+action,init);
-  var j;try{j=await r.json()}catch(e){throw new Error('Server error. Please try again.')}
-  if(!r.ok){if(r.status===401||r.status===403){setAdmin(false)}throw new Error(j.error||'Something went wrong')}
-  return j;
+/* ---------- backend (Supabase) ---------- */
+var CFG=window.SARVANI_CONFIG||{};
+var BUCKET='product-images';
+var CATS=['Suits','Sarees','Blouses','Fabrics','Other'];
+var configured=!!(CFG.supabaseUrl&&CFG.supabaseAnonKey&&!/YOUR_/.test(CFG.supabaseUrl+CFG.supabaseAnonKey));
+var sb=null;
+if(configured&&window.supabase){
+  try{sb=window.supabase.createClient(CFG.supabaseUrl,CFG.supabaseAnonKey,{auth:{persistSession:true,autoRefreshToken:true,detectSessionInUrl:false}})}catch(e){console.error(e)}
 }
+function fail(msg,status){var e=new Error(msg);e.status=status||400;return e}
+function need(){if(!sb)throw fail('The website database is not connected yet. Please finish the setup steps in README.md.',500)}
+function clean(s,m){return String(s==null?'':s).replace(/<[^>]*>/g,'').trim().slice(0,m)}
+function pathOf(url){var p=String(url).split('/object/public/'+BUCKET+'/');return p[1]?decodeURIComponent(p[1].split('?')[0]):null}
+function dbErr(e){return fail((e&&e.message)||'Database error. Please try again.',e&&(e.code==='42501'||e.status===401||e.status===403)?403:500)}
+async function sessionUser(){var s=await sb.auth.getSession();return s.data&&s.data.session?s.data.session.user:null}
+async function checkAdmin(){
+  var u=await sessionUser();if(!u)return false;
+  var r=await sb.from('admins').select('user_id').eq('user_id',u.id).maybeSingle();
+  return !!(r.data&&!r.error);
+}
+async function requireAdmin(){need();if(!(await checkAdmin()))throw fail('Please log in as admin.',401)}
+async function removeFiles(urls){
+  var paths=(urls||[]).map(pathOf).filter(Boolean);
+  if(paths.length){try{await sb.storage.from(BUCKET).remove(paths)}catch(e){console.warn(e)}}
+}
+var handlers={
+  async catalog(){
+    need();
+    var p=await sb.from('products').select('*').order('created_at',{ascending:false});
+    if(p.error)throw dbErr(p.error);
+    var s=await sb.from('settings').select('*').eq('id',1).maybeSingle();
+    if(s.error)throw dbErr(s.error);
+    return {products:p.data||[],settings:s.data||{whatsapp:'917976900021'}};
+  },
+  async me(){
+    if(!sb)return {admin:false};
+    try{return {admin:await checkAdmin()}}catch(e){return {admin:false}}
+  },
+  async login(b){
+    need();
+    var email=clean(b.id,120).toLowerCase(),pw=String(b.password||'');
+    if(!email||!pw)throw fail('Please enter your email and password.',401);
+    var r=await sb.auth.signInWithPassword({email:email,password:pw});
+    if(r.error){
+      if(r.error.status===400||/invalid login/i.test(r.error.message))throw fail('Incorrect email or password.',401);
+      throw fail('Could not sign in. Please check your internet and try again.',500);
+    }
+    if(!(await checkAdmin())){await sb.auth.signOut();throw fail('This account is not allowed to manage the site.',401)}
+    return {ok:true};
+  },
+  async logout(){need();await sb.auth.signOut();return {ok:true}},
+  async save_product(fd){
+    await requireAdmin();
+    var id=fd.get('id')||'',name=clean(fd.get('name'),120);
+    if(!name)throw fail('Please enter the product name.',422);
+    var cat=CATS.indexOf(fd.get('category'))>=0?fd.get('category'):'Suits';
+    var pr=String(fd.get('price')||'').trim(),price=null;
+    if(pr!==''){if(isNaN(pr)||+pr<0)throw fail('Price must be a number.',422);price=Math.round(+pr)}
+    var sizes=[];(JSON.parse(fd.get('sizes')||'[]')).forEach(function(s){s=clean(s,14);if(s&&sizes.indexOf(s)<0)sizes.push(s)});
+    var oldImgs=[];
+    if(id){
+      var ex=await sb.from('products').select('images').eq('id',id).maybeSingle();
+      if(ex.error)throw dbErr(ex.error);
+      oldImgs=(ex.data&&ex.data.images)||[];
+    }else id='p'+Array.prototype.map.call(crypto.getRandomValues(new Uint8Array(5)),function(x){return ('0'+x.toString(16)).slice(-2)}).join('');
+    var files=fd.getAll('images[]'),order=JSON.parse(fd.get('order')||'[]'),fin=[],uploaded=[];
+    try{
+      for(var k=0;k<order.length&&fin.length<8;k++){
+        var t=order[k];
+        if(t.indexOf('old:')===0){var u=t.slice(4);if(oldImgs.indexOf(u)>=0&&fin.indexOf(u)<0)fin.push(u)}
+        else if(t.indexOf('new:')===0){
+          var f=files[+t.slice(4)];if(!f)continue;
+          var path=id+'/'+Date.now()+'-'+k+'.jpg';
+          var up=await sb.storage.from(BUCKET).upload(path,f,{contentType:'image/jpeg',cacheControl:'31536000',upsert:false});
+          if(up.error)throw fail('Photo upload failed: '+up.error.message,500);
+          uploaded.push(path);
+          fin.push(sb.storage.from(BUCKET).getPublicUrl(path).data.publicUrl);
+        }
+      }
+      var rec={id:id,name:name,category:cat,price:price,sizes:sizes.slice(0,20),description:clean(fd.get('description'),1500),images:fin,in_stock:fd.get('in_stock')==='1',updated_at:new Date().toISOString()};
+      var w=await sb.from('products').upsert(rec,{onConflict:'id'}).select().single();
+      if(w.error)throw dbErr(w.error);
+    }catch(e){
+      if(uploaded.length){try{await sb.storage.from(BUCKET).remove(uploaded)}catch(x){}}
+      throw e;
+    }
+    await removeFiles(oldImgs.filter(function(u){return fin.indexOf(u)<0}));
+    return {ok:true,product:w.data};
+  },
+  async delete_product(b){
+    await requireAdmin();
+    var ex=await sb.from('products').select('images').eq('id',b.id).maybeSingle();
+    var d=await sb.from('products').delete().eq('id',b.id);
+    if(d.error)throw dbErr(d.error);
+    if(ex.data)await removeFiles(ex.data.images);
+    return {ok:true};
+  },
+  async save_settings(b){
+    await requireAdmin();
+    var wa=String(b.whatsapp||'').replace(/\D/g,'');if(wa.length===10)wa='91'+wa;
+    if(wa.length<11||wa.length>15)throw fail('Enter a valid WhatsApp number (10 digits, or with country code).',422);
+    var ig=clean(b.instagram,200);if(ig&&!/^https?:\/\//i.test(ig))ig='https://instagram.com/'+ig.replace(/^[@\/]+/,'');
+    var s={id:1,whatsapp:wa,tagline:clean(b.tagline,160),about:clean(b.about,800),address:clean(b.address,250),hours:clean(b.hours,120),instagram:ig};
+    var r=await sb.from('settings').upsert(s,{onConflict:'id'}).select().single();
+    if(r.error)throw dbErr(r.error);
+    return {ok:true,settings:r.data};
+  },
+  async change_password(b){
+    await requireAdmin();
+    var u=await sessionUser();
+    var np=String(b.new||'');
+    if(np.length<10)throw fail('New password must be at least 10 characters.',422);
+    var chk=await sb.auth.signInWithPassword({email:u.email,password:String(b.current||'')});
+    if(chk.error)throw fail('Current password is wrong.',422);
+    var r=await sb.auth.updateUser({password:np});
+    if(r.error)throw fail(r.error.message||'Could not update the password.',422);
+    return {ok:true};
+  }
+};
+async function api(action,opts){
+  var h=handlers[action];if(!h)throw new Error('Unknown action');
+  try{return await h((opts||{}).body)}
+  catch(e){
+    if(e&&(e.status===401||e.status===403))setAdmin(false);
+    if(e&&e.status)throw e;
+    console.error(e);
+    throw new Error('Something went wrong. Please check your internet and try again.');
+  }
+}
+if(sb)sb.auth.onAuthStateChange(function(ev){if(ev==='SIGNED_OUT')setAdmin(false)});
 
 /* ---------- WhatsApp ---------- */
 function waLink(text){return 'https://wa.me/'+S.settings.whatsapp+'?text='+encodeURIComponent(text)}
@@ -496,7 +614,7 @@ $('#loginForm').onsubmit=async function(e){
   e.preventDefault();var b=$('#loginBtn');b.disabled=true;$('#loginErr').textContent='';
   try{
     var r=await api('login',{body:{id:$('#lid').value,password:$('#lpw').value}});
-    setAdmin(true,r.csrf);$('#lpw').value='';hide('#ovLogin');openDash();
+    setAdmin(true);$('#lpw').value='';hide('#ovLogin');openDash();
   }catch(err){$('#loginErr').textContent=err.message}
   b.disabled=false;
 };
@@ -614,7 +732,7 @@ $('#prodForm').onsubmit=async function(e){
 
 function askConfirm(msg){return new Promise(function(res){
   $('#cfMsg').textContent=msg;show('#ovConfirm');
-  function fin(v){hide('#ovConfirm');res(v)}
+  function fin(v){hide('#ovConfirm');$('#cfYes').onclick=$('#cfNo').onclick=null;$('#ovConfirm [data-close]').onclick=function(){hide('#ovConfirm')};res(v)}
   $('#cfYes').onclick=function(){fin(true)};$('#cfNo').onclick=function(){fin(false)};$('#ovConfirm [data-close]').onclick=function(){fin(false)};
 })}
 async function delProduct(p){
@@ -637,8 +755,8 @@ $('#setForm').onsubmit=async function(e){
 $('#pwForm').onsubmit=async function(e){
   e.preventDefault();$('#pwErr').textContent='';
   if($('#pwNew').value!==$('#pwNew2').value){$('#pwErr').textContent='New passwords do not match.';return}
-  try{await api('change_password',{body:{current:$('#pwCur').value,new:$('#pwNew').value,new_id:$('#pwId').value}});
-    $('#pwForm').reset();toast('ID & password updated ✓');}
+  try{await api('change_password',{body:{current:$('#pwCur').value,new:$('#pwNew').value}});
+    $('#pwForm').reset();toast('Password updated ✓');}
   catch(err){$('#pwErr').textContent=err.message}
 };
 
@@ -661,7 +779,7 @@ async function load(){
 }
 $('#yr').textContent=new Date().getFullYear();
 load();
-api('me').then(function(r){if(r.admin)setAdmin(true,r.csrf)}).catch(function(){});
+api('me').then(function(r){if(r.admin)setAdmin(true)}).catch(function(){});
 })();
 </script>
 </body>
