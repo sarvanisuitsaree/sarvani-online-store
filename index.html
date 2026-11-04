@@ -1,11 +1,11 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Sarvani Suit &amp; Saree – Jaipur</title>
-<meta name="description" content="Sarvani Suit &amp; Saree, Murlipura, Jaipur – traditional and designer sarees, suits, lehariya prints, cotton and silk fabrics and blouses. Order on WhatsApp.">
-<meta property="og:title" content="Sarvani Suit &amp; Saree – Jaipur">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sarvani Suit & Saree – Murlipura, Jaipur</title>
+<meta name="description" content="Sarvani Suit & Saree, Murlipura, Jaipur – traditional and designer sarees, suits, lehariya prints, cotton and silk fabrics and blouses. Order on WhatsApp.">
+<meta property="og:title" content="Sarvani Suit & Saree – Jaipur">
 <meta property="og:description" content="Elegant suits and sarees. Order instantly on WhatsApp.">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#6b1d2f">
@@ -28,7 +28,7 @@ a{color:inherit}
 h1,h2,h3{font-family:var(--serif);font-weight:600;letter-spacing:.01em;line-height:1.15}
 
 /* header */
-header{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(251,247,240,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header{position:sticky;top:0;z-index:50;background:rgba(251,247,240,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 .nav{display:flex;align-items:center;justify-content:space-between;height:72px;gap:16px}
 .logo{font-family:var(--serif);font-size:32px;letter-spacing:.22em;color:var(--maroon);text-decoration:none;font-weight:700;display:flex;flex-direction:column;line-height:1}
 .logo small{font-family:var(--sans);font-size:9px;letter-spacing:.42em;color:var(--gold);font-weight:600;margin-top:6px;padding-left:2px}
@@ -131,7 +131,7 @@ footer button{margin-top:18px;font-size:11px;letter-spacing:.2em;text-transform:
 footer button:hover{opacity:1;border-color:currentColor}
 
 /* floating whatsapp */
-.fab{position:fixed;right:calc(18px + env(safe-area-inset-right,0px));bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:40;width:58px;height:58px;border-radius:50%;background:var(--wa);display:flex;align-items:center;justify-content:center;box-shadow:0 10px 26px -6px rgba(0,0,0,.4);transition:.2s}
+.fab{position:fixed;right:18px;bottom:18px;z-index:40;width:58px;height:58px;border-radius:50%;background:var(--wa);display:flex;align-items:center;justify-content:center;box-shadow:0 10px 26px -6px rgba(0,0,0,.4);transition:.2s}
 .fab:hover{transform:scale(1.08)}
 .fab svg{width:30px;height:30px;fill:#fff}
 
@@ -195,6 +195,12 @@ textarea{min-height:92px;resize:vertical}
 .sw{display:flex;align-items:center;gap:10px;margin-top:16px;font-size:14px}
 .sw input{width:20px;height:20px;accent-color:var(--maroon)}
 .formbar{display:flex;gap:12px;justify-content:flex-end;margin-top:26px;flex-wrap:wrap}
+[hidden]{display:none!important}
+.pubnote{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap;background:#fff9ee;border:1px solid var(--gold);border-radius:8px;padding:12px 14px;font-size:14px;margin:10px 0 0}.pubnote.dirty{background:#fdecea;border-color:#e3b5b5}.pubnote .sz{display:block;color:var(--muted);font-size:12px;margin-top:2px}
+.adminbar button.hot{background:var(--gold-l);color:var(--maroon-d);padding:3px 12px;border-radius:20px;margin-left:16px}
+ol.steps{padding-left:20px;margin:14px 0 18px;font-size:14px;color:#4b3a3d;display:flex;flex-direction:column;gap:8px}
+.ok{color:#117a3d;font-size:13px;margin-top:12px;text-align:center}
+.cats{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}.catchip{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:#fff;border-radius:30px;padding:6px 14px;font-size:13px}.catchip button{font-size:17px;line-height:1;color:#a32626}
 .toast{position:fixed;left:50%;bottom:90px;transform:translateX(-50%);background:var(--ink);color:#fff;padding:12px 22px;border-radius:40px;font-size:14px;z-index:300;opacity:0;pointer-events:none;transition:.3s;max-width:90%}
 .toast.show{opacity:1}
 .adminbar{display:none;background:var(--ink);color:#fff;font-size:12px;letter-spacing:.1em}
@@ -202,11 +208,11 @@ body.is-admin .adminbar{display:block}
 .adminbar .wrap{display:flex;justify-content:space-between;align-items:center;padding:8px 0;gap:10px;flex-wrap:wrap}
 .adminbar button{color:var(--gold-l);text-transform:uppercase;letter-spacing:.14em;font-size:11px;margin-left:16px}
 .loading{text-align:center;padding:60px;color:var(--muted);grid-column:1/-1}
-[hidden]{display:none!important}
 </style>
 </head>
 <body>
-<div class="adminbar"><div class="wrap"><span id="abState">● Logged in as Admin</span><span><button id="abPub">Publish to website</button><button id="abDash">Open Dashboard</button><button id="abOut">Log out</button></span></div></div>
+
+<div class="adminbar"><div class="wrap"><span id="abMsg">● Admin mode</span><span><button id="abPub">Publish</button><button id="abDash">Dashboard</button><button id="abOut">Log out</button></span></div></div>
 
 <header>
   <div class="wrap nav">
@@ -298,6 +304,7 @@ body.is-admin .adminbar{display:block}
 <!-- admin dashboard -->
 <div class="ov" id="ovAdmin"><div class="modal panel"><button class="x" data-close>×</button>
   <h2>Admin Dashboard</h2>
+  <div class="pubnote" id="pubNote"><span id="pubTxt"></span><button type="button" class="btn btn-maroon btn-sm" id="pubBtn">Publish</button></div>
   <div class="tabs" id="tabs">
     <button data-tab="list" class="on">Products</button>
     <button data-tab="edit">Add / Edit Product</button>
@@ -312,7 +319,7 @@ body.is-admin .adminbar{display:block}
       <input type="hidden" id="pId">
       <div class="row2">
         <div><label class="f">Product name *</label><input type="text" id="pName" maxlength="120" placeholder="e.g. Banarasi Silk Saree – Wine Red" required></div>
-        <div><label class="f">Category</label><select id="pCat"><option>Suits</option><option>Sarees</option><option>Blouses</option><option>Fabrics</option><option>Other</option></select></div>
+        <div><label class="f">Category</label><div style="display:flex;gap:8px;flex-wrap:wrap"><select id="pCat" style="flex:1;min-width:140px"></select><button type="button" class="btn btn-ghost btn-sm" id="addCatBtn">+ Add new category</button></div></div>
       </div>
       <div class="row2">
         <div><label class="f">Price (₹) — leave empty to show “Price on request”</label><input type="number" id="pPrice" min="0" step="1" inputmode="numeric" placeholder="e.g. 2499"></div>
@@ -323,7 +330,7 @@ body.is-admin .adminbar{display:block}
       <div class="szadd"><input type="text" id="szCustom" maxlength="14" placeholder="Custom size, e.g. 46"><button type="button" class="btn btn-ghost btn-sm" id="szAddBtn">Add</button></div>
       <label class="f">Description</label>
       <textarea id="pDesc" maxlength="1500" placeholder="Fabric, work, colour, care instructions…"></textarea>
-      <label class="f">Photos (up to 8) — first photo is the cover</label>
+      <label class="f">Photos (up to 6) — first photo is the cover</label>
       <div class="photos" id="photos"></div>
       <input type="file" id="fileIn" accept="image/jpeg,image/png,image/webp" multiple hidden>
       <div class="err" id="prodErr"></div>
@@ -344,6 +351,9 @@ body.is-admin .adminbar{display:block}
         <div><label class="f">Opening hours</label><textarea id="sHours" maxlength="120" style="min-height:70px"></textarea></div>
       </div>
       <label class="f">Instagram (optional)</label><input type="text" id="sIg" placeholder="@yourshop or full link">
+      <label class="f">GitHub repository link (gives you a shortcut in Publish)</label><input type="text" id="sRepo" placeholder="https://github.com/yourname/yourshop">
+      <label class="f">Copy products from an older website file (optional)</label><input type="file" id="impFile" accept=".html,text/html">
+      <div class="err" id="impMsg"></div>
       <div class="err" id="setErr"></div>
       <div class="formbar"><button type="submit" class="btn btn-maroon">Save Settings</button></div>
     </form>
@@ -362,18 +372,30 @@ body.is-admin .adminbar{display:block}
   </div>
 </div></div>
 
+<div class="ov" id="ovPub"><div class="modal login" style="width:min(540px,100%)"><button class="x" data-close>×</button>
+  <h2>Publish to your website</h2>
+  <ol class="steps">
+    <li><b>Download</b> your updated website file with the button below. It is named <b>index.html</b>.</li>
+    <li>Open your <b>GitHub repository</b>, choose <b>Add file → Upload files</b>, drop <b>index.html</b> in, and click <b>Commit changes</b>.</li>
+    <li>Wait 1 to 2 minutes, then refresh your website. Your changes are live.</li>
+  </ol>
+  <button type="button" class="btn btn-maroon" id="pubDl" style="width:100%">Download updated website file</button>
+  <div class="ok" id="pubOk"></div><div class="err" id="pubErr"></div>
+  <a class="btn btn-ghost" id="pubRepo" href="#" target="_blank" rel="noopener" style="width:100%;margin-top:10px" hidden>Open my GitHub repository</a>
+  <p class="note" id="pubHint" style="margin-top:12px">Tip: paste your GitHub repository link in Shop Settings to get a shortcut button here.</p>
+  <p class="note" style="margin-top:8px">If your browser names the file “index (1).html”, rename it to index.html before uploading, so it replaces the old one.</p>
+</div></div>
+<div class="ov" id="ovCat"><div class="modal login" style="width:min(460px,100%)"><button class="x" data-close>×</button>
+  <h2>Categories</h2><p>Add a category such as Lehengas or Dupattas. It appears in the product form and as a filter button on your website.</p>
+  <div class="szadd" style="margin-top:6px"><input type="text" id="catName" maxlength="30" placeholder="New category name" style="max-width:none;flex:1"><button type="button" class="btn btn-maroon btn-sm" id="catAdd">Add</button></div>
+  <div class="err" id="catErr" style="text-align:left"></div>
+  <div class="lbl" style="margin-top:14px">Your categories</div><div class="cats" id="catList"></div>
+  <p class="note" style="margin-top:12px">A category can be removed (×) only when no product uses it.</p>
+</div></div>
 <div class="ov" id="ovConfirm"><div class="modal login" style="width:min(380px,100%)"><button class="x" data-close>×</button><p id="cfMsg" style="text-align:center;margin:18px 0 22px;font-size:16px"></p><div class="formbar" style="justify-content:center;margin-top:0"><button type="button" class="btn btn-ghost btn-sm" id="cfNo">Cancel</button><button type="button" class="btn btn-danger btn-sm" id="cfYes">Delete</button></div></div></div>
-<div class="ov" id="ovPub"><div class="modal login" style="width:min(480px,100%)"><button class="x" data-close>×</button>
-  <h2 style="font-size:30px">Publish your changes</h2>
-  <div style="font-size:14px;line-height:1.7;margin:16px 0 20px;color:var(--ink)">Your changes are saved only in this browser until you put them on the website:
-  <ol style="margin:10px 0 0 20px"><li>Click the button below to download <b>sarvani-update.zip</b>, then unzip it.</li>
-  <li>Open your repository on GitHub → <b>Add file → Upload files</b>.</li>
-  <li>Drag in <b>data.json</b> and the <b>images</b> folder from the unzipped folder.</li>
-  <li>Click <b>Commit changes</b>. After 1–2 minutes the changes are live for everyone.</li></ol></div>
-  <button class="btn btn-maroon" style="width:100%" type="button" id="pubGo">Download update file</button></div></div>
 <div class="toast" id="toast"></div>
 
-<script type="application/json" id="defaultData">{"rev": 1, "admin": {"id": "sarvani-admin", "salt": "9982fa01472c3f9f97bdf8b28048e76b", "hash": "38fe0c5536ee2005aab443766bfbb9ee6b837aa6d381797c1895efd067f308d5"}, "settings": {"whatsapp": "917976900021", "tagline": "Timeless Indian elegance, chosen with love for every occasion.", "about": "Established in 2015 in Murlipura, Jaipur, Sarvani Suit & Saree brings you traditional and designer ethnic wear: sarees, suits, lehariya prints, cotton and silk fabrics, and blouses for every occasion.", "address": "Plot No. 9, Road Number 2, opposite VKI (Vishwakarma Industrial Area), Ram Nagar, Murlipura, Jaipur, Rajasthan 302039", "hours": "", "instagram": "https://instagram.com/sarvani_jaipur"}, "products": []}</script>
+<script id="sarvani-data" type="application/json">{"v": 1, "settings": {"whatsapp": "917976900021", "tagline": "Timeless Indian elegance, chosen with love for every occasion.", "about": "Established in 2015 in Murlipura, Jaipur, Sarvani Suit & Saree brings you traditional and designer ethnic wear: sarees, suits, lehariya prints, cotton and silk fabrics, and blouses for every occasion.", "address": "Plot No. 9, Road Number 2, opposite VKI (Vishwakarma Industrial Area), Ram Nagar, Murlipura, Jaipur, Rajasthan 302039", "hours": "", "instagram": "https://instagram.com/sarvani_jaipur", "repo": ""}, "categories": ["Suits", "Sarees", "Blouses", "Fabrics", "Other"], "products": [], "auth": {"id": "sarvani-admin", "salt": "bf2df2323632c966f7cf4c75", "iter": 10000, "hash": "15c2c05bfe8590501defb6272b1f7167c935bfa03f5c14f7611a8350115c71a6"}}</script>
 <script>
 (function(){
 'use strict';
@@ -385,193 +407,202 @@ function money(n){return '₹'+Number(n).toLocaleString('en-IN')}
 function toast(m){var t=$('#toast');t.textContent=m;t.classList.add('show');clearTimeout(toast._t);toast._t=setTimeout(function(){t.classList.remove('show')},2600)}
 function img(n){return n}
 
-/* ---------- local backend (no server needed) ----------
-   Published data lives in data.json + images/ inside the GitHub repository.
-   The owner's edits are kept as a private draft in this browser until they
-   click "Publish to website" and upload the update file to GitHub. */
-var CATS=['Suits','Sarees','Blouses','Fabrics','Other'];
-var FLAG='sarvani_admin_session',memFlag=false,memKV={},PUB=null;
-function fail(msg,status){var e=new Error(msg);e.status=status||400;return e}
-function clean(s,m){return String(s==null?'':s).replace(/<[^>]*>/g,'').trim().slice(0,m)}
-function clone(o){return JSON.parse(JSON.stringify(o))}
-function isAdminSession(){try{return memFlag||sessionStorage.getItem(FLAG)==='1'}catch(e){return memFlag}}
-function setFlag(on){memFlag=on;try{if(on)sessionStorage.setItem(FLAG,'1');else sessionStorage.removeItem(FLAG)}catch(e){}}
-/* tiny IndexedDB key-value store (falls back to memory in private mode) */
-function idb(){return new Promise(function(res,rej){try{var r=indexedDB.open('sarvani_site',1);r.onupgradeneeded=function(){r.result.createObjectStore('kv')};r.onsuccess=function(){res(r.result)};r.onerror=function(){rej(r.error)}}catch(e){rej(e)}})}
-async function idbGet(k){try{var db=await idb();return await new Promise(function(res,rej){var t=db.transaction('kv').objectStore('kv').get(k);t.onsuccess=function(){res(t.result)};t.onerror=function(){rej(t.error)}})}catch(e){return memKV[k]}}
-async function idbSet(k,v){try{var db=await idb();await new Promise(function(res,rej){var t=db.transaction('kv','readwrite');t.objectStore('kv').put(v,k);t.oncomplete=res;t.onerror=function(){rej(t.error)}})}catch(e){memKV[k]=v}}
-async function idbDel(k){delete memKV[k];try{var db=await idb();await new Promise(function(res,rej){var t=db.transaction('kv','readwrite');t.objectStore('kv').delete(k);t.oncomplete=res;t.onerror=function(){rej(t.error)}})}catch(e){}}
-/* password hashing */
-async function sha(s){
-  if(!(window.crypto&&crypto.subtle))throw fail('Please open the website with its https:// address to log in.',500);
-  var b=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(s));
-  return Array.prototype.map.call(new Uint8Array(b),function(x){return ('0'+x.toString(16)).slice(-2)}).join('');
-}
-function hashPw(id,salt,pw){return sha(salt+'|'+String(id).toLowerCase()+'|'+pw)}
-function randHex(n){return Array.prototype.map.call(crypto.getRandomValues(new Uint8Array(n)),function(x){return ('0'+x.toString(16)).slice(-2)}).join('')}
-/* published data */
-async function ensurePub(){
-  if(PUB)return PUB;
-  var d=null;
-  try{var r=await fetch('data.json',{cache:'no-store'});if(r.ok){d=await r.json()}}catch(e){}
-  if(!d||!d.products){try{d=JSON.parse(document.getElementById('defaultData').textContent)}catch(e){d={rev:1,products:[],settings:{whatsapp:'917976900021'},admin:null}}}
-  PUB=d;return d;
-}
-async function currentDraft(){
-  await ensurePub();
-  var d=await idbGet('draft');
-  if(d&&d.baseRev<PUB.rev){await idbDel('draft');d=null}
-  return d||null;
-}
-async function mutate(fn){
-  await ensurePub();
-  var d=await currentDraft();
-  if(!d)d={baseRev:PUB.rev,products:clone(PUB.products),settings:clone(PUB.settings),admin:clone(PUB.admin)};
-  await fn(d);
-  await idbSet('draft',d);setDirty(true);
-}
-function setDirty(on){
-  var el=document.getElementById('abState');
-  if(el)el.textContent=on?'● Logged in as Admin — you have changes that are NOT live yet':'● Logged in as Admin — only you can see this bar';
-  var b=document.getElementById('abPub');if(b)b.style.fontWeight=on?'700':'400';
-  setDirty.on=on;
-}
-function toDataURL(blob){return new Promise(function(res,rej){var r=new FileReader();r.onload=function(){res(r.result)};r.onerror=function(){rej(new Error('Could not read photo'))};r.readAsDataURL(blob)})}
-function dataBytes(u){var b=atob(u.split(',')[1]),a=new Uint8Array(b.length);for(var i=0;i<b.length;i++)a[i]=b.charCodeAt(i);return a}
-function requireAdmin(){if(!isAdminSession())throw fail('Please log in as admin.',401)}
-var handlers={
-  async catalog(){
-    await ensurePub();
-    var d=isAdminSession()?await currentDraft():null;
-    var src=d||PUB;
-    return {products:src.products||[],settings:src.settings||{whatsapp:'917976900021'},dirty:!!d};
-  },
-  async login(b){
-    await ensurePub();
-    var id=clean(b.id,40),pw=String(b.password||'');
-    if(!id||!pw)throw fail('Please enter your ID and password.',401);
-    var d=await currentDraft(),cands=[PUB.admin];if(d&&d.admin)cands.push(d.admin);
-    for(var i=0;i<cands.length;i++){
-      var c=cands[i];if(!c)continue;
-      if(id.toLowerCase()===String(c.id).toLowerCase()&&(await hashPw(c.id,c.salt,pw))===c.hash){setFlag(true);return {ok:true}}
+/* ---------- backend: everything lives inside this one file ----------
+   Visitors see the products saved in the data block above. The owner's edits are kept in the
+   owner's browser as a draft until "Publish" downloads a new index.html to upload to GitHub. */
+var DEFCATS=['Suits','Sarees','Blouses','Fabrics','Other'];
+function norm(d){if(!Array.isArray(d.categories)||!d.categories.length)d.categories=DEFCATS.slice();return d}
+var EMB=norm(JSON.parse(document.getElementById('sarvani-data').textContent));
+var EMBS=JSON.stringify(EMB),D=null,DIRTY=false,SIZE=0,SESSKEY='sarvani_admin_on',memAdmin=false,LIMIT=24*1048576,MAXPH=6;
+function clone(x){return JSON.parse(JSON.stringify(x))}
+function sleep(ms){return new Promise(function(r){setTimeout(r,ms)})}
+function bad(m,status){var e=new Error(m);if(status)e.status=status;return e}
+function ctext(v,m){return String(v==null?'':v).replace(/<[^>]*>/g,'').trim().slice(0,m)}
+function inAdmin(){try{return sessionStorage.getItem(SESSKEY)==='1'}catch(e){return memAdmin}}
+function setSess(on){memAdmin=on;try{if(on)sessionStorage.setItem(SESSKEY,'1');else sessionStorage.removeItem(SESSKEY)}catch(e){}}
+
+/* sha-256 (pure JS, so login works on any page address) */
+var SHA_K=[],SHA_H=[];(function(){function isP(x){for(var i=2;i*i<=x;i++)if(x%i===0)return false;return true}
+ var p=2,f=function(x){return ((x-Math.floor(x))*4294967296)|0};
+ while(SHA_K.length<64){if(isP(p)){if(SHA_H.length<8)SHA_H.push(f(Math.pow(p,1/2)));SHA_K.push(f(Math.pow(p,1/3)))}p++}})();
+function rot(x,n){return (x>>>n)|(x<<(32-n))}
+function sha256hex(str){
+  var m=unescape(encodeURIComponent(str)),l=m.length,w=[],i,j;
+  for(i=0;i<l;i++)w[i>>2]|=m.charCodeAt(i)<<(24-(i%4)*8);
+  w[l>>2]|=0x80<<(24-(l%4)*8);w[((l+8>>6)+1)*16-1]=l*8;
+  for(i=0;i<w.length;i++)w[i]|=0;
+  var H=SHA_H.slice(),K=SHA_K;
+  for(j=0;j<w.length;j+=16){
+    var W=w.slice(j,j+16);
+    for(i=16;i<64;i++){var g0=W[i-15],g1=W[i-2];W[i]=(W[i-16]+(rot(g0,7)^rot(g0,18)^(g0>>>3))+W[i-7]+(rot(g1,17)^rot(g1,19)^(g1>>>10)))|0}
+    var a=H[0],b=H[1],c=H[2],d=H[3],e=H[4],f=H[5],g=H[6],h=H[7];
+    for(i=0;i<64;i++){
+      var t1=(h+(rot(e,6)^rot(e,11)^rot(e,25))+((e&f)^(~e&g))+K[i]+W[i])|0;
+      var t2=((rot(a,2)^rot(a,13)^rot(a,22))+((a&b)^(a&c)^(b&c)))|0;
+      h=g;g=f;f=e;e=(d+t1)|0;d=c;c=b;b=a;a=(t1+t2)|0;
     }
-    throw fail('Incorrect ID or password.',401);
-  },
-  async logout(){setFlag(false);return {ok:true}},
-  async save_product(fd){
-    requireAdmin();
-    var id=fd.get('id')||'',name=clean(fd.get('name'),120);
-    if(!name)throw fail('Please enter the product name.',422);
-    var cat=CATS.indexOf(fd.get('category'))>=0?fd.get('category'):'Suits';
-    var pr=String(fd.get('price')||'').trim(),price=null;
-    if(pr!==''){if(isNaN(pr)||+pr<0)throw fail('Price must be a number.',422);price=Math.round(+pr)}
-    var sizes=[];(JSON.parse(fd.get('sizes')||'[]')).forEach(function(s){s=clean(s,14);if(s&&sizes.indexOf(s)<0)sizes.push(s)});
-    var files=fd.getAll('images[]'),order=JSON.parse(fd.get('order')||'[]');
-    var newUrls={};for(var k=0;k<files.length;k++)newUrls[k]=await toDataURL(files[k]);
-    var saved=null;
-    await mutate(function(d){
-      var idx=-1;d.products.forEach(function(p,i){if(p.id===id)idx=i});
-      var old=idx>=0?d.products[idx].images||[]:[],fin=[];
-      for(var j=0;j<order.length&&fin.length<8;j++){
-        var t=order[j];
-        if(t.indexOf('old:')===0){var n=t.slice(4);if(old.indexOf(n)>=0&&fin.indexOf(n)<0)fin.push(n)}
-        else if(t.indexOf('new:')===0){var u=newUrls[+t.slice(4)];if(u)fin.push(u)}
-      }
-      var rec={id:idx>=0?id:'p'+randHex(4),name:name,category:cat,price:price,sizes:sizes.slice(0,20),description:clean(fd.get('description'),1500),images:fin,in_stock:fd.get('in_stock')==='1'};
-      if(idx>=0)d.products[idx]=rec;else d.products.unshift(rec);
-      saved=rec;
-    });
-    return {ok:true,product:saved};
-  },
-  async delete_product(b){
-    requireAdmin();
-    await mutate(function(d){d.products=d.products.filter(function(p){return p.id!==b.id})});
-    return {ok:true};
-  },
-  async save_settings(b){
-    requireAdmin();
+    H[0]=(H[0]+a)|0;H[1]=(H[1]+b)|0;H[2]=(H[2]+c)|0;H[3]=(H[3]+d)|0;H[4]=(H[4]+e)|0;H[5]=(H[5]+f)|0;H[6]=(H[6]+g)|0;H[7]=(H[7]+h)|0;
+  }
+  return H.map(function(x){return ('00000000'+(x>>>0).toString(16)).slice(-8)}).join('');
+}
+function hashPw(pw,salt,iter){var h=sha256hex(salt+':'+pw);for(var i=0;i<iter;i++)h=sha256hex(h+salt+pw);return h}
+function newAuth(id,pw){var a=new Uint8Array(12);crypto.getRandomValues(a);var salt=Array.prototype.map.call(a,function(x){return ('0'+x.toString(16)).slice(-2)}).join('');return {id:id,salt:salt,iter:10000,hash:hashPw(pw,salt,10000)}}
+function authOk(a,id,pw){return !!a&&String(id||'').trim().toLowerCase()===String(a.id).toLowerCase()&&hashPw(String(pw||''),a.salt,a.iter)===a.hash}
+
+/* draft storage (IndexedDB, falls back to memory) */
+function idb(){return new Promise(function(res,rej){var r=indexedDB.open('sarvani',1);r.onupgradeneeded=function(){r.result.createObjectStore('kv')};r.onsuccess=function(){res(r.result)};r.onerror=function(){rej(r.error)}})}
+async function idbGet(k){try{var db=await idb();return await new Promise(function(res,rej){var t=db.transaction('kv').objectStore('kv').get(k);t.onsuccess=function(){res(t.result)};t.onerror=function(){rej(t.error)}})}catch(e){return null}}
+async function idbSet(k,v){try{var db=await idb();return await new Promise(function(res,rej){var st=db.transaction('kv','readwrite').objectStore('kv');var t=v===undefined?st.delete(k):st.put(v,k);t.onsuccess=function(){res(true)};t.onerror=function(){rej(t.error)}})}catch(e){return false}}
+async function getDraft(){var d=await idbGet('draft');if(!d||!d.products||!d.settings||!d.auth)return null;norm(d);if(JSON.stringify(d)===EMBS){await idbSet('draft',undefined);return null}return d}
+function measure(){var t=JSON.stringify(D);SIZE=t.length;DIRTY=t!==EMBS}
+function refreshPub(){
+  var mb=(SIZE/1048576).toFixed(1),n=$('#pubNote'),t=$('#pubTxt');
+  if(t)t.innerHTML=(DIRTY?'<b>You have unpublished changes.</b> They are saved in this browser only. Click <b>Publish</b> to put them on your live website.':'<b>Everything is published.</b>')+'<span class="sz">Website file size: '+mb+' MB (GitHub limit 24 MB)'+(SIZE>8388608?' · Getting heavy: phones may open the site slowly. Use fewer or smaller photos.':'')+'</span>';
+  if(n)n.classList.toggle('dirty',DIRTY);
+  var m=$('#abMsg');if(m)m.textContent=DIRTY?'● Admin mode · you have unpublished changes':'● Admin mode · everything is published';
+  var b=$('#abPub');if(b)b.classList.toggle('hot',DIRTY);
+}
+async function persist(){measure();await idbSet('draft',DIRTY?D:undefined);refreshPub()}
+var READY=(async function(){D=clone(EMB);if(inAdmin()){var d=await getDraft();if(d)D=d}measure()})();
+
+function tries(){try{return JSON.parse(localStorage.getItem('sarvani_tries')||'null')||{n:0,t:0}}catch(e){return {n:0,t:0}}}
+function setTries(x){try{localStorage.setItem('sarvani_tries',JSON.stringify(x))}catch(e){}}
+function readURL(f){return new Promise(function(res,rej){var r=new FileReader();r.onload=function(){res(r.result)};r.onerror=function(){rej(bad('Could not read the photo.'))};r.readAsDataURL(f)})}
+
+async function backend(action,b){
+  await READY;
+  if(action==='catalog')return {products:D.products,settings:D.settings,categories:D.categories};
+  if(action==='me')return {admin:inAdmin(),csrf:'x'};
+  if(action==='login'){
+    var tr=tries(),now=Date.now();
+    if(tr.n>=5&&now-tr.t<900000)throw bad('Too many wrong attempts. Please try again after 15 minutes.');
+    if(tr.n>=5)tr={n:0,t:0};
+    await sleep(400);
+    var ok=authOk(EMB.auth,b.id,b.password),dr=null;
+    if(!ok){dr=await getDraft();ok=!!(dr&&authOk(dr.auth,b.id,b.password))}
+    if(!ok){setTries({n:tr.n+1,t:now});throw bad('Incorrect ID or password.')}
+    setTries({n:0,t:0});setSess(true);
+    if(!dr)dr=await getDraft();
+    D=dr||clone(EMB);measure();refreshPub();
+    return {ok:true,csrf:'x'};
+  }
+  if(action==='logout'){setSess(false);D=clone(EMB);measure();return {ok:true}}
+  if(!inAdmin())throw bad('Please log in as admin.',401);
+
+  if(action==='save_product'){
+    var id=ctext(b.get('id'),30),name=ctext(b.get('name'),120);
+    if(!name)throw bad('Please enter the product name.');
+    var cat=D.categories.indexOf(b.get('category'))>=0?b.get('category'):D.categories[0];
+    var pr=String(b.get('price')||'').trim(),price=null;
+    if(pr!==''){if(isNaN(pr)||+pr<0||+pr>10000000)throw bad('Price must be a number.');price=Math.round(+pr)}
+    var sizes=[];JSON.parse(b.get('sizes')||'[]').forEach(function(z){z=ctext(z,14);if(z&&sizes.indexOf(z)<0)sizes.push(z)});
+    var ex=null;if(id){ex=D.products.filter(function(p){return p.id===id})[0];if(!ex)throw bad('Product not found.')}
+    var old=ex?ex.images:[],files=b.getAll('images[]'),order=JSON.parse(b.get('order')||'[]'),fin=[];
+    for(var i=0;i<order.length&&fin.length<MAXPH;i++){var t=String(order[i]);
+      if(t.indexOf('old:')===0){var o=old[+t.slice(4)];if(o&&fin.indexOf(o)<0)fin.push(o)}
+      else if(t.indexOf('new:')===0){var f=files[+t.slice(4)];if(f){var u=await readURL(f);if(u.indexOf('data:image/')!==0)throw bad('Only photos are allowed.');fin.push(u)}}}
+    var rec={id:ex?ex.id:'p'+Math.random().toString(16).slice(2,10),name:name,category:cat,price:price,sizes:sizes.slice(0,20),description:ctext(b.get('description'),1500),images:fin,in_stock:b.get('in_stock')==='1',created:ex?ex.created:Math.floor(Date.now()/1000),updated:Math.floor(Date.now()/1000)};
+    var backup=D.products;D.products=D.products.slice();
+    if(ex)D.products[D.products.indexOf(ex)]=rec;else D.products.unshift(rec);
+    measure();
+    if(SIZE>LIMIT){D.products=backup;measure();throw bad('Too many photos: the website file would be '+(SIZE/1048576).toFixed(1)+' MB, and GitHub accepts up to 25 MB. Remove some photos or products and try again.')}
+    await persist();return {ok:true,product:rec};
+  }
+  if(action==='delete_product'){D.products=D.products.filter(function(p){return p.id!==String(b.id)});await persist();return {ok:true}}
+  if(action==='save_settings'){
     var wa=String(b.whatsapp||'').replace(/\D/g,'');if(wa.length===10)wa='91'+wa;
-    if(wa.length<11||wa.length>15)throw fail('Enter a valid WhatsApp number (10 digits, or with country code).',422);
-    var ig=clean(b.instagram,200);if(ig&&!/^https?:\/\//i.test(ig))ig='https://instagram.com/'+ig.replace(/^[@\/]+/,'');
-    var s={whatsapp:wa,tagline:clean(b.tagline,160),about:clean(b.about,800),address:clean(b.address,250),hours:clean(b.hours,120),instagram:ig};
-    await mutate(function(d){d.settings=s});
-    return {ok:true,settings:s};
-  },
-  async change_password(b){
-    requireAdmin();
-    var np=String(b.new||'');
-    if(np.length<10)throw fail('New password must be at least 10 characters.',422);
-    await ensurePub();var d0=await currentDraft(),cur=(d0&&d0.admin)||PUB.admin;
-    if((await hashPw(cur.id,cur.salt,String(b.current||'')))!==cur.hash)throw fail('Current password is wrong.',422);
-    var nid=clean(b.new_id,40)||cur.id,salt=randHex(16),h=await hashPw(nid,salt,np);
-    await mutate(function(d){d.admin={id:nid,salt:salt,hash:h}});
-    return {ok:true};
+    if(wa.length<11||wa.length>15)throw bad('Enter a valid WhatsApp number (10 digits, or with country code).');
+    var ig=ctext(b.instagram,200);if(ig&&!/^https?:\/\//i.test(ig))ig='https://instagram.com/'+ig.replace(/^[@\/]+/,'');
+    var rp=ctext(b.repo,200);if(rp&&!/^https:\/\/github\.com\/[^\/\s]+\/[^\/\s]+/i.test(rp))throw bad('Enter your GitHub repository link, for example https://github.com/yourname/yourshop');
+    D.settings={whatsapp:wa,tagline:ctext(b.tagline,160),about:ctext(b.about,800),address:ctext(b.address,250),hours:ctext(b.hours,120),instagram:ig,repo:rp};
+    await persist();return {ok:true,settings:D.settings};
   }
-};
-async function api(action,opts){
-  var h=handlers[action];if(!h)throw new Error('Unknown action');
-  try{return await h((opts||{}).body)}
-  catch(e){
-    if(e&&(e.status===401||e.status===403)){setFlag(false);setAdmin(false)}
-    if(e&&e.status)throw e;
-    console.error(e);
-    throw new Error('Something went wrong. Please try again.');
+  if(action==='add_category'){
+    var cn=ctext(b.name,30);if(!cn)throw bad('Please type the category name.');
+    if(D.categories.some(function(c){return c.toLowerCase()===cn.toLowerCase()}))throw bad('That category already exists.');
+    if(D.categories.length>=24)throw bad('You can have up to 24 categories.');
+    D.categories.push(cn);await persist();return {ok:true,categories:D.categories,added:cn};
   }
-}
-/* ---------- publish: build update file for GitHub ---------- */
-var CRC=(function(){var t=[];for(var n=0;n<256;n++){var c=n;for(var k=0;k<8;k++)c=c&1?0xEDB88320^(c>>>1):c>>>1;t[n]=c>>>0}return t})();
-function crc32(b){var c=0xFFFFFFFF;for(var i=0;i<b.length;i++)c=CRC[(c^b[i])&255]^(c>>>8);return (c^0xFFFFFFFF)>>>0}
-function makeZip(files){
-  var enc=new TextEncoder(),parts=[],cd=[],off=0,cdSize=0;
-  files.forEach(function(f){
-    var nb=enc.encode(f.name),crc=crc32(f.data),sz=f.data.length;
-    var lh=new DataView(new ArrayBuffer(30));
-    lh.setUint32(0,0x04034b50,true);lh.setUint16(4,20,true);lh.setUint16(6,0x0800,true);lh.setUint16(12,0x21,true);
-    lh.setUint32(14,crc,true);lh.setUint32(18,sz,true);lh.setUint32(22,sz,true);lh.setUint16(26,nb.length,true);
-    parts.push(new Uint8Array(lh.buffer),nb,f.data);
-    var ch=new DataView(new ArrayBuffer(46));
-    ch.setUint32(0,0x02014b50,true);ch.setUint16(4,20,true);ch.setUint16(6,20,true);ch.setUint16(8,0x0800,true);ch.setUint16(14,0x21,true);
-    ch.setUint32(16,crc,true);ch.setUint32(20,sz,true);ch.setUint32(24,sz,true);ch.setUint16(28,nb.length,true);ch.setUint32(42,off,true);
-    cd.push(new Uint8Array(ch.buffer),nb);cdSize+=46+nb.length;off+=30+nb.length+sz;
-  });
-  var end=new DataView(new ArrayBuffer(22));
-  end.setUint32(0,0x06054b50,true);end.setUint16(8,files.length,true);end.setUint16(10,files.length,true);end.setUint32(12,cdSize,true);end.setUint32(16,off,true);
-  return new Blob(parts.concat(cd,[new Uint8Array(end.buffer)]),{type:'application/zip'});
-}
-async function buildUpdate(){
-  var d=await currentDraft();if(!d)return null;
-  var files=[],n=0,stamp=Date.now().toString(36);
-  var products=d.products.map(function(p){
-    var imgs=(p.images||[]).map(function(u){
-      if(/^data:/.test(u)){var name='images/'+p.id+'-'+stamp+(n++)+'.jpg';files.push({name:name,data:dataBytes(u)});return name}
-      return u;
+  if(action==='delete_category'){
+    var dn=String(b.name||'');
+    if(D.products.some(function(p){return p.category===dn}))throw bad('Some products still use this category.');
+    if(D.categories.length<=1)throw bad('You need at least one category.');
+    D.categories=D.categories.filter(function(c){return c!==dn});await persist();return {ok:true,categories:D.categories};
+  }
+  if(action==='import_products'){
+    var mm=/<script id="sarvani-data" type="application\/json">([\s\S]*?)<\/script>/.exec(String(b.text||''));
+    if(!mm)throw bad('That file is not a Sarvani website file.');
+    var od;try{od=JSON.parse(mm[1])}catch(e){throw bad('That file could not be read.')}
+    if(!od||!Array.isArray(od.products))throw bad('That file has no products in it.');
+    var snap=clone(D),have={},added=0;D.products.forEach(function(p){have[p.id]=1});
+    (od.categories||[]).forEach(function(c){c=ctext(c,30);if(c&&D.categories.every(function(x){return x.toLowerCase()!==c.toLowerCase()}))D.categories.push(c)});
+    od.products.forEach(function(p){
+      if(!p||!p.id||have[p.id]||!p.name)return;
+      var ct=ctext(p.category,30)||D.categories[0];if(D.categories.indexOf(ct)<0)D.categories.push(ct);
+      D.products.push({id:String(p.id).slice(0,30),name:ctext(p.name,120),category:ct,price:(typeof p.price==='number'&&p.price>=0)?Math.round(p.price):null,
+        sizes:(Array.isArray(p.sizes)?p.sizes:[]).map(function(z){return ctext(z,14)}).filter(Boolean).slice(0,20),description:ctext(p.description,1500),
+        images:(Array.isArray(p.images)?p.images:[]).filter(function(u){return typeof u==='string'&&u.indexOf('data:image/')===0}).slice(0,MAXPH),
+        in_stock:p.in_stock!==false,created:p.created||Math.floor(Date.now()/1000),updated:p.updated||Math.floor(Date.now()/1000)});added++;
     });
-    return Object.assign({},p,{images:imgs});
-  });
-  var out={rev:d.baseRev+1,admin:d.admin,settings:d.settings,products:products};
-  files.unshift({name:'data.json',data:new TextEncoder().encode(JSON.stringify(out,null,1))});
-  return makeZip(files);
+    measure();
+    if(SIZE>LIMIT){D=snap;measure();throw bad('Those products would make the website file too big for GitHub (24 MB limit).')}
+    await persist();return {ok:true,added:added};
+  }
+  if(action==='change_password'){
+    if(!authOk(D.auth,D.auth.id,b.current)&&!authOk(EMB.auth,EMB.auth.id,b.current))throw bad('Current password is wrong.');
+    var np=String(b.new||'');if(np.length<10)throw bad('New password must be at least 10 characters.');
+    D.auth=newAuth(ctext(b.new_id,40)||D.auth.id,np);await persist();return {ok:true};
+  }
+  throw bad('Unknown action');
 }
-function bindPublish(){
-  document.getElementById('abPub').onclick=function(){
-    if(!setDirty.on){toast('Everything is already published ✓');return}
-    show('#ovPub');
-  };
-  document.getElementById('pubGo').onclick=async function(){
-    var b=this;b.disabled=true;
-    try{
-      var z=await buildUpdate();if(!z){toast('Nothing to publish');return}
-      var a=document.createElement('a');a.href=URL.createObjectURL(z);a.download='sarvani-update.zip';
-      document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(a.href)},4000);
-      toast('Update file downloaded ✓');
-    }catch(e){console.error(e);toast('Could not create the update file')}
-    b.disabled=false;
-  };
+async function api(action,opts){
+  opts=opts||{};
+  try{return await backend(action,opts.body)}
+  catch(e){if(e.status===401||e.status===403)setAdmin(false);throw e}
 }
+async function buildFile(){
+  await READY;
+  var u=location.href.split('#')[0].split('?')[0],r;
+  try{r=await fetch(u,{cache:'no-store'})}catch(e){throw bad('Please open your live website address (starting with https://) to publish, not a file from your computer.')}
+  if(!r.ok)throw bad('Could not read the website file. Please refresh and try again.');
+  var t=await r.text(),re=/<script id="sarvani-data" type="application\/json">[\s\S]*?<\/script>/;
+  if(!re.test(t))throw bad('Could not read the website file. Please refresh and try again.');
+  var json=JSON.stringify(D).replace(/</g,'\\u003c');
+  return t.replace(re,function(){return '<script id="sarvani-data" type="application/json">'+json+'<\/script>'});
+}
+function openPublish(){
+  $('#pubErr').textContent='';$('#pubOk').textContent='';
+  var rp=(S.settings&&S.settings.repo)||'',a=$('#pubRepo');
+  if(rp){a.href=rp;a.hidden=false}else a.hidden=true;
+  $('#pubHint').hidden=!!rp;
+  show('#ovPub');
+}
+$('#pubDl').onclick=async function(){
+  var b=this;b.disabled=true;$('#pubErr').textContent='';$('#pubOk').textContent='';var old=b.textContent;b.textContent='Preparing…';
+  try{
+    var t=await buildFile(),blob=new Blob([t],{type:'text/html'}),mb=blob.size/1048576;
+    if(blob.size>LIMIT)throw bad('The file is '+mb.toFixed(1)+' MB, and GitHub accepts up to 25 MB. Remove some photos or products first.');
+    var a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='index.html';document.body.appendChild(a);a.click();
+    setTimeout(function(){URL.revokeObjectURL(a.href);a.remove()},4000);
+    $('#pubOk').textContent='Downloaded index.html ('+mb.toFixed(1)+' MB). Now upload it to GitHub (step 2).';
+  }catch(e){$('#pubErr').textContent=e.message}
+  b.disabled=false;b.textContent=old;
+};
+$('#abPub').onclick=openPublish;$('#pubBtn').onclick=openPublish;
+function fillCats(){var sel=$('#pCat'),cur=sel.value,cs=S.categories||[];sel.innerHTML=cs.map(function(c){return '<option>'+esc(c)+'</option>'}).join('');if(cur&&cs.indexOf(cur)>=0)sel.value=cur}
+function renderCatList(){$('#catList').innerHTML=(S.categories||[]).map(function(c){var used=S.products.some(function(p){return p.category===c});return '<span class="catchip">'+esc(c)+(used?'':'<button type="button" data-delcat="'+esc(c)+'" aria-label="Remove '+esc(c)+'">×</button>')+'</span>'}).join('')}
+function openCats(){$('#catErr').textContent='';$('#catName').value='';renderCatList();show('#ovCat');setTimeout(function(){$('#catName').focus()},80)}
+async function addCat(){var n=$('#catName').value;$('#catErr').textContent='';try{var r=await api('add_category',{body:{name:n}});S.categories=r.categories;fillCats();$('#pCat').value=r.added;renderCatList();renderFilters();$('#catName').value='';toast('Category added ✓')}catch(e){$('#catErr').textContent=e.message}}
+$('#addCatBtn').onclick=openCats;$('#catAdd').onclick=addCat;
+$('#catName').onkeydown=function(e){if(e.key==='Enter'){e.preventDefault();addCat()}};
+$('#catList').onclick=async function(e){var b=e.target.closest('[data-delcat]');if(!b)return;try{var r=await api('delete_category',{body:{name:b.dataset.delcat}});S.categories=r.categories;fillCats();renderCatList();renderFilters();toast('Category removed')}catch(er){$('#catErr').textContent=er.message}};
+$('#impFile').onchange=async function(){var f=this.files[0];this.value='';if(!f)return;$('#impMsg').textContent='';try{var t=await f.text(),r=await api('import_products',{body:{text:t}});await load();toast(r.added+' product'+(r.added===1?'':'s')+' imported ✓');if(!r.added)$('#impMsg').textContent='No new products found. They are already here.'}catch(e){$('#impMsg').textContent=e.message}};
+
+
 /* ---------- WhatsApp ---------- */
 function waLink(text){return 'https://wa.me/'+S.settings.whatsapp+'?text='+encodeURIComponent(text)}
 function orderMsg(p,size){
-  var L=['Namaste Sarvani 🙏','I would like to order this:','','*'+p.name+'*','Category: '+p.category.replace(/s$/,'')];
+  var L=['Namaste Sarvani 🙏','I would like to order this:','','*'+p.name+'*','Category: '+p.category];
   if(p.price!=null)L.push('Price: '+money(p.price));
   if(size)L.push('Size: '+size);
   else if(p.sizes&&p.sizes.length)L.push('Available sizes: '+p.sizes.join(', ')+' (my size: ____ )');
@@ -601,14 +632,14 @@ function applySettings(){
   bindGeneral();
 }
 function renderFilters(){
-  var cats=['All'];['Suits','Sarees','Blouses','Fabrics','Other'].forEach(function(c){if(S.products.some(function(p){return p.category===c}))cats.push(c)});
+  var cats=['All'];var allc=(S.categories||[]).slice();S.products.forEach(function(p){if(allc.indexOf(p.category)<0)allc.push(p.category)});allc.forEach(function(c){if(S.products.some(function(p){return p.category===c}))cats.push(c)});
   if(cats.indexOf(S.cat)<0)S.cat='All';
   var f=$('#filters');f.innerHTML='';
   cats.forEach(function(c){var b=document.createElement('button');b.className='chip'+(c===S.cat?' on':'');b.textContent=c;b.onclick=function(){S.cat=c;renderFilters();renderGrid()};f.appendChild(b)});
   f.style.display=cats.length>2?'flex':'none';
 }
 function cardImg(p){
-  if(p.images&&p.images.length)return '<img loading="lazy" src="'+img(p.images[0])+'" alt="'+esc(p.name)+'">';
+  if(p.images&&p.images.length)return '<img loading="lazy" decoding="async" src="'+img(p.images[0])+'" alt="'+esc(p.name)+'">';
   return '<div class="noimg"><b>S</b><span>'+esc(p.category)+'</span></div>';
 }
 function renderGrid(){
@@ -656,7 +687,7 @@ $$('.ov').forEach(function(o){
   o.addEventListener('mousedown',function(e){if(e.target===o&&o.id!=='ovAdmin')hide('#'+o.id)});
   $('[data-close]',o).onclick=function(){hide('#'+o.id)};
 });
-document.addEventListener('keydown',function(e){if(e.key==='Escape'){$$('.ov.open').forEach(function(o){hide('#'+o.id)})}});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){var op=$$('.ov.open');if(op.length)hide('#'+op[op.length-1].id)}});
 $('#burger').onclick=function(){$('#links').classList.toggle('open')};
 $$('#links a').forEach(function(a){a.onclick=function(){$('#links').classList.remove('open')}});
 
@@ -674,13 +705,13 @@ $('#loginForm').onsubmit=async function(e){
   e.preventDefault();var b=$('#loginBtn');b.disabled=true;$('#loginErr').textContent='';
   try{
     var r=await api('login',{body:{id:$('#lid').value,password:$('#lpw').value}});
-    setAdmin(true);await load();$('#lpw').value='';hide('#ovLogin');openDash();
+    setAdmin(true,r.csrf);$('#lpw').value='';await load();hide('#ovLogin');openDash();
   }catch(err){$('#loginErr').textContent=err.message}
   b.disabled=false;
 };
 
 /* ---------- dashboard ---------- */
-function openDash(){show('#ovAdmin');tab('list')}
+function openDash(){show('#ovAdmin');tab('list');refreshPub()}
 function tab(t){
   $$('#tabs button').forEach(function(b){b.classList.toggle('on',b.dataset.tab===t)});
   ['list','edit','settings','account'].forEach(function(n){$('#tab-'+n).hidden=n!==t});
@@ -693,12 +724,12 @@ $('#tabs').onclick=function(e){var b=e.target.closest('button');if(b){if(b.datas
 
 function renderList(){
   var el=$('#tab-list');
-  var head='<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;gap:10px;flex-wrap:wrap"><span style="color:var(--muted);font-size:14px">'+S.products.length+' product'+(S.products.length===1?'':'s')+'</span><button class="btn btn-maroon btn-sm" id="addNew">+ Add New Product</button></div>';
+  var head='<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;gap:10px;flex-wrap:wrap"><span style="color:var(--muted);font-size:14px">'+S.products.length+' product'+(S.products.length===1?'':'s')+'</span><span style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn btn-ghost btn-sm" id="addCat2">+ Add new category</button><button class="btn btn-maroon btn-sm" id="addNew">+ Add New Product</button></span></div>';
   if(!S.products.length){el.innerHTML=head+'<p class="empty" style="padding:40px 0">No products yet. Add your first one!</p>';}
   else el.innerHTML=head+'<table class="tbl"><thead><tr><th></th><th>Product</th><th class="hide-m">Sizes</th><th>Price</th><th></th></tr></thead><tbody>'+S.products.map(function(p){
     return '<tr data-id="'+esc(p.id)+'"><td>'+(p.images&&p.images[0]?'<img src="'+img(p.images[0])+'" alt="">':'<div class="t"></div>')+'</td><td><b>'+esc(p.name)+'</b><br><span style="color:var(--muted);font-size:12px">'+esc(p.category)+(p.in_stock?'':' · Sold out')+'</span></td><td class="hide-m">'+esc((p.sizes||[]).join(', ')||'—')+'</td><td>'+(p.price!=null?money(p.price):'—')+'</td><td><div class="acts"><button class="btn btn-ghost btn-sm" data-edit>Edit</button><button class="btn btn-danger btn-sm" data-del>Delete</button></div></td></tr>';
   }).join('')+'</tbody></table>';
-  var ad=$('#addNew');if(ad)ad.onclick=function(){newProduct();tab('edit')};
+  var ad=$('#addNew');if(ad)ad.onclick=function(){newProduct();tab('edit')};var ac=$('#addCat2');if(ac)ac.onclick=openCats;
 }
 $('#tab-list').addEventListener('click',function(e){
   var tr=e.target.closest('tr');if(!tr)return;var p=find(tr.dataset.id);if(!p)return;
@@ -723,7 +754,7 @@ function renderPhotos(){
     var src=it.type==='old'?img(it.name):it.url;
     return '<div class="ph-i"><img src="'+src+'" alt=""><button type="button" class="rm" data-rm="'+i+'" aria-label="Remove photo">×</button><button type="button" class="cv'+(i===0?' is':'')+'" data-cv="'+i+'">'+(i===0?'Cover':'Make cover')+'</button></div>';
   }).join('');
-  if(S.form.items.length<8)h+='<button type="button" class="drop" id="dropBtn">+ Add photos</button>';
+  if(S.form.items.length<6)h+='<button type="button" class="drop" id="dropBtn">+ Add photos</button>';
   $('#photos').innerHTML=h;
   var d=$('#dropBtn');if(d)d.onclick=function(){$('#fileIn').click()};
 }
@@ -736,11 +767,11 @@ function shrink(file){
   return new Promise(function(res,rej){
     var u=URL.createObjectURL(file),im=new Image();
     im.onload=function(){
-      var m=1200,r=Math.min(1,m/Math.max(im.width,im.height)),c=document.createElement('canvas');
+      var m=900,r=Math.min(1,m/Math.max(im.width,im.height)),c=document.createElement('canvas');
       c.width=Math.round(im.width*r);c.height=Math.round(im.height*r);
       var x=c.getContext('2d');x.fillStyle='#fff';x.fillRect(0,0,c.width,c.height);x.drawImage(im,0,0,c.width,c.height);
       URL.revokeObjectURL(u);
-      c.toBlob(function(b){b?res(b):rej(new Error('bad'))},'image/jpeg',.82);
+      c.toBlob(function(b){b?res(b):rej(new Error('bad'))},'image/jpeg',.72);
     };
     im.onerror=function(){URL.revokeObjectURL(u);rej(new Error('Could not read "'+file.name+'". Use JPG, PNG or WebP.'))};
     im.src=u;
@@ -750,7 +781,7 @@ $('#fileIn').onchange=async function(){
   var files=Array.prototype.slice.call(this.files);this.value='';
   $('#prodErr').textContent='';
   for(var i=0;i<files.length;i++){
-    if(S.form.items.length>=8){toast('Maximum 8 photos per product');break}
+    if(S.form.items.length>=6){toast('Maximum 6 photos per product');break}
     try{var b=await shrink(files[i]);S.form.items.push({type:'new',blob:b,url:URL.createObjectURL(b)});S.form.dirty=true}
     catch(err){$('#prodErr').textContent=err.message}
   }
@@ -759,7 +790,7 @@ $('#fileIn').onchange=async function(){
 
 function newProduct(silent){
   S.form={sizes:[],items:[],dirty:false};
-  $('#pId').value='';$('#pName').value='';$('#pCat').value='Suits';$('#pPrice').value='';$('#pStock').value='1';$('#pDesc').value='';$('#prodErr').textContent='';
+  $('#pId').value='';$('#pName').value='';$('#pCat').value=(S.categories&&S.categories[0])||'Suits';$('#pPrice').value='';$('#pStock').value='1';$('#pDesc').value='';$('#prodErr').textContent='';
   $('#prodSave').textContent='Save Product';
   renderSizes();renderPhotos();
 }
@@ -768,7 +799,7 @@ function editProduct(p){
   newProduct();
   $('#pId').value=p.id;$('#pName').value=p.name;$('#pCat').value=p.category;$('#pPrice').value=p.price!=null?p.price:'';
   $('#pStock').value=p.in_stock?'1':'0';$('#pDesc').value=p.description||'';
-  S.form.sizes=(p.sizes||[]).slice();S.form.items=(p.images||[]).map(function(n){return {type:'old',name:n}});
+  S.form.sizes=(p.sizes||[]).slice();S.form.items=(p.images||[]).map(function(n,i){return {type:'old',name:n,idx:i}});
   $('#prodSave').textContent='Save Changes';
   renderSizes();renderPhotos();show('#ovAdmin');tab('edit');
 }
@@ -782,41 +813,41 @@ $('#prodForm').onsubmit=async function(e){
     fd.append('id',$('#pId').value);fd.append('name',$('#pName').value);fd.append('category',$('#pCat').value);
     fd.append('price',$('#pPrice').value);fd.append('in_stock',$('#pStock').value);fd.append('description',$('#pDesc').value);
     fd.append('sizes',JSON.stringify(S.form.sizes));
-    S.form.items.forEach(function(it){if(it.type==='old')order.push('old:'+it.name);else{fd.append('images[]',it.blob,'photo'+n+'.jpg');order.push('new:'+n);n++}});
+    S.form.items.forEach(function(it){if(it.type==='old')order.push('old:'+it.idx);else{fd.append('images[]',it.blob,'photo'+n+'.jpg');order.push('new:'+n);n++}});
     fd.append('order',JSON.stringify(order));
     await api('save_product',{body:fd});
-    await load();newProduct();tab('list');toast('Saved ✓ — click Publish to website to make it live');
+    await load();newProduct();tab('list');toast('Product saved ✓');
   }catch(err){$('#prodErr').textContent=err.message}
   b.disabled=false;b.textContent=old;
 };
 
 function askConfirm(msg){return new Promise(function(res){
   $('#cfMsg').textContent=msg;show('#ovConfirm');
-  function fin(v){hide('#ovConfirm');$('#cfYes').onclick=$('#cfNo').onclick=null;$('#ovConfirm [data-close]').onclick=function(){hide('#ovConfirm')};res(v)}
+  function fin(v){hide('#ovConfirm');res(v)}
   $('#cfYes').onclick=function(){fin(true)};$('#cfNo').onclick=function(){fin(false)};$('#ovConfirm [data-close]').onclick=function(){fin(false)};
 })}
 async function delProduct(p){
   if(!(await askConfirm('Delete "'+p.name+'" permanently? This also removes its photos.')))return;
-  try{await api('delete_product',{body:{id:p.id}});await load();if($('#ovAdmin').classList.contains('open'))renderList();toast('Deleted — click Publish to website to make it live')}
+  try{await api('delete_product',{body:{id:p.id}});await load();if($('#ovAdmin').classList.contains('open'))renderList();toast('Product deleted')}
   catch(err){toast(err.message)}
 }
 
 function fillSettings(){
   var s=S.settings;$('#sWa').value=s.whatsapp||'';$('#sTag').value=s.tagline||'';$('#sAbout').value=s.about||'';
-  $('#sAddr').value=s.address||'';$('#sHours').value=s.hours||'';$('#sIg').value=s.instagram||'';$('#setErr').textContent='';
+  $('#sAddr').value=s.address||'';$('#sHours').value=s.hours||'';$('#sIg').value=s.instagram||'';$('#sRepo').value=s.repo||'';$('#setErr').textContent='';
 }
 $('#setForm').onsubmit=async function(e){
   e.preventDefault();$('#setErr').textContent='';
   try{
-    var r=await api('save_settings',{body:{whatsapp:$('#sWa').value,tagline:$('#sTag').value,about:$('#sAbout').value,address:$('#sAddr').value,hours:$('#sHours').value,instagram:$('#sIg').value}});
-    S.settings=r.settings;applySettings();fillSettings();toast('Saved ✓ — click Publish to website to make it live');
+    var r=await api('save_settings',{body:{whatsapp:$('#sWa').value,tagline:$('#sTag').value,about:$('#sAbout').value,address:$('#sAddr').value,hours:$('#sHours').value,instagram:$('#sIg').value,repo:$('#sRepo').value}});
+    S.settings=r.settings;applySettings();fillSettings();toast('Settings saved ✓');
   }catch(err){$('#setErr').textContent=err.message}
 };
 $('#pwForm').onsubmit=async function(e){
   e.preventDefault();$('#pwErr').textContent='';
   if($('#pwNew').value!==$('#pwNew2').value){$('#pwErr').textContent='New passwords do not match.';return}
   try{await api('change_password',{body:{current:$('#pwCur').value,new:$('#pwNew').value,new_id:$('#pwId').value}});
-    $('#pwForm').reset();toast('Saved ✓ — click Publish to website to make it live');}
+    $('#pwForm').reset();toast('ID & password updated ✓');}
   catch(err){$('#pwErr').textContent=err.message}
 };
 
@@ -830,7 +861,7 @@ $$('form').forEach(function(f){
 /* ---------- boot ---------- */
 async function load(){
   try{
-    var r=await api('catalog');S.products=r.products;S.settings=r.settings;setDirty(!!r.dirty);
+    var r=await api('catalog');S.products=r.products;S.settings=r.settings;S.categories=r.categories;fillCats();
     applySettings();renderFilters();renderGrid();
   }catch(err){
     $('#grid').innerHTML='<div class="empty">Our collection is being updated. Please message us on WhatsApp!</div>';
@@ -838,9 +869,8 @@ async function load(){
   }
 }
 $('#yr').textContent=new Date().getFullYear();
-bindPublish();if(isAdminSession())setAdmin(true);
 load();
-
+api('me').then(function(r){if(r.admin)setAdmin(true,r.csrf)}).catch(function(){});
 })();
 </script>
 </body>
