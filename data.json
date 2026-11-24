@@ -17,7 +17,27 @@
   "Fabrics",
   "Other"
  ],
- "products": [],
+ "products": [
+  {
+   "id": "p1685e24c",
+   "name": "banarasi silk saree",
+   "category": "Sarees",
+   "price": 2499,
+   "sizes": [
+    "XS",
+    "S",
+    "M",
+    "L"
+   ],
+   "description": "banarasi silk saree",
+   "images": [
+    "6e4ec22bca0b83b362d6"
+   ],
+   "in_stock": true,
+   "created": 1795526555,
+   "updated": 1795526555
+  }
+ ],
  "auth": {
   "id": "sarvani-admin",
   "salt": "2e2e9aa4ebdbaa5e795fd90b",
