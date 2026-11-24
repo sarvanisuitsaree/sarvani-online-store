@@ -17,7 +17,22 @@
   "Fabrics",
   "Other"
  ],
- "products": [],
+ "products": [
+  {
+   "id": "pd99111b2",
+   "name": "banarasi",
+   "category": "Suits",
+   "price": 2499,
+   "sizes": [],
+   "description": "",
+   "images": [
+    "edc8c64f30456b10f68a"
+   ],
+   "in_stock": true,
+   "created": 1795527174,
+   "updated": 1795527174
+  }
+ ],
  "auth": {
   "id": "sarvani-admin",
   "salt": "162716ba939ab18d22846fea",
