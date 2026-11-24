@@ -7,8 +7,8 @@
   "address": "Plot No. 9, Road Number 2, opposite VKI (Vishwakarma Industrial Area), Ram Nagar, Murlipura, Jaipur, Rajasthan 302039",
   "hours": "",
   "instagram": "https://instagram.com/sarvani_jaipur",
-  "repo": "",
-  "branch": ""
+  "repo": "sarvanisuitsaree/sarvani-online-store",
+  "branch": "main"
  },
  "categories": [
   "Suits",
@@ -20,8 +20,15 @@
  "products": [],
  "auth": {
   "id": "sarvani-admin",
-  "salt": "f58cf655fc02268f0b75f65b",
+  "salt": "2e2e9aa4ebdbaa5e795fd90b",
   "iter": 10000,
-  "hash": "3dbc034e9da1539da5667978f8e803450ece9cf19bceae82bb35fddce224a127"
+  "hash": "960a136e2cb4f049a20063ce831e2a331488d88738d721df61235fda6cb6c973",
+  "tok": {
+   "s": "AlxZl93MwKkkYPz5Ld/REg==",
+   "i": "VwFMAX9VLFhV8KDe",
+   "c": "ddoywFgnUDNfCgqHDrBlOqN7e00vVxgwG2iDXEDQYJPElTewYVwYccKI4ZlA2eH8bbwSeLXVs8z/vJzPfP7gA9n+MgOMzgnFyHKz+OuPpeSZaP247WvtpM1tLG+mvS2A0zVoaK+Gn4EaXnsACw==",
+   "repo": "sarvanisuitsaree/sarvani-online-store",
+   "branch": "main"
+  }
  }
 }
