@@ -40,13 +40,13 @@
  ],
  "auth": {
   "id": "sarvani-admin",
-  "salt": "5de50e4fef330490094cfc4e",
+  "salt": "8404b1cf9d70fa230741bba5",
   "iter": 10000,
-  "hash": "911eaca80865be1e8af64e0f36d5f274ef14005f484a2b034109fead594c8984",
+  "hash": "6970f51d8ce7a0a9b808df2bd0eb4110b328b69ce519c53915bfb7e3d8b3d668",
   "tok": {
-   "s": "xda9WnGT5F3w7ivQAnp9rA==",
-   "i": "3gng21UmRr4qURT5",
-   "c": "Eg/NAT4te94z9FK/oAx7PrBwDmoYm+B9ajgMfIcYGe6vaPapFHeuRAl4Zr9WhVGxZhjdOcNGnsSou0580W+hLMHP2AQqVb9xNa2flnC54Zil7diNbE/6ItZ2RWaYy4o7mv09Fs47FE3yzr8hZA==",
+   "s": "nKQ1Aih61NDfz774D/nExg==",
+   "i": "TCeRJjlvhgpPS72I",
+   "c": "6US/QVGm0n9QmfZTrcHiHruHWOVOhrdkepiB6JSaVYQpMNhcNZqQJ7f/mJMVU54wGe0OgsOOZnsB/DFagrWLpDR/fa71UiigmLboBTPBrSuCIYmEpT5EncFqcKJbUEpBRkYmAhN742Qd0pcN0w==",
    "repo": "sarvanisuitsaree/sarvani-online-store",
    "branch": "main"
   }
