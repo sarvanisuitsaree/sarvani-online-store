@@ -3,7 +3,7 @@
  "settings": {
   "whatsapp": "917976900021",
   "tagline": "Timeless Indian elegance, chosen with love for every occasion.",
-  "about": "Established in 2015 in Murlipura, Jaipur, Sarvani Suit & Saree brings you traditional and designer ethnic wear: sarees, suits, lehariya prints, cotton and silk fabrics, and blouses for every occasion.",
+  "about": "Established in 2017 in Murlipura, Jaipur, Sarvani Suit and Saree brings you traditional and designer ethnic wear: saree, suit, lehariya prints, cotton and silk fabrics, and blouses for every occasion.",
   "address": "Plot No. 9, Road Number 2, opposite VKI (Vishwakarma Industrial Area), Ram Nagar, Murlipura, Jaipur, Rajasthan 302039",
   "hours": "",
   "instagram": "https://instagram.com/sarvani_jaipur",
@@ -11,8 +11,8 @@
   "branch": "main"
  },
  "categories": [
-  "Suits",
-  "Sarees",
+  "Suit",
+  "Saree",
   "Blouses",
   "Fabrics",
   "Other"
@@ -21,7 +21,7 @@
   {
    "id": "pe29c320c",
    "name": "SHORT KURTI PALLAZO",
-   "category": "Suits",
+   "category": "Suit",
    "price": 2000,
    "sizes": [
     "L"
@@ -36,14 +36,14 @@
   }
  ],
  "auth": {
-  "id": "sarvani-admin",
-  "salt": "e73ff44a14cbaf5e3fc6abdf",
+  "id": "uditjpr",
+  "salt": "9335fe8be7cb08048fa7d672",
   "iter": 10000,
-  "hash": "caa4629b23c32005a081dc05a3350b28583e2d77009950164590efa0e17289cd",
+  "hash": "f357d979991100361726cd086700eaeeeb2a993cb7f80e4b6e0b77275b059f7a",
   "tok": {
-   "s": "RRaAB1dT3sOCoHzUb3+EWA==",
-   "i": "PkpvTNLpI5YAB8mO",
-   "c": "AzLUhSG7S9sSx0Bfis5K6kWOoQy9gbD5t5XOUoBHGrJdsKC/5n9CsGCTZiIC1ntoM+3Yfba9qyWfFABUTMr6BBvFcvhc+v6CwDq2nCoiReL29w3ocGVEUHivIL560JjJMNlOrEHWzaD1aP6s1g==",
+   "s": "lfkoMyu8AwkBN+hr1gjdsg==",
+   "i": "feAgI0gCNBt0o7Eo",
+   "c": "ycn0eJRVUgxBOLzMAsJomOSLT3CrrhVFlCJdxNcA+lUiZq1Hdl1LNLEtZkkVbzGW1fB1uKuuHzlZBrMK02EBi8K3yF1CJcTIYcSWH4xOiRvnRI3QW45Wmj7tJfpi3fl7LYocOH58iv5971FZwQ==",
    "repo": "sarvanisuitsaree/sarvani-online-store",
    "branch": "main"
   }
