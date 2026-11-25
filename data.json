@@ -17,7 +17,24 @@
   "Fabrics",
   "Other"
  ],
- "products": [],
+ "products": [
+  {
+   "id": "pe29c320c",
+   "name": "SHORT KURTI PALLAZO",
+   "category": "Suits",
+   "price": 2000,
+   "sizes": [
+    "L"
+   ],
+   "description": "SIMER SILK",
+   "images": [
+    "0b546973865e84f41729"
+   ],
+   "in_stock": true,
+   "created": 1795595495,
+   "updated": 1795595495
+  }
+ ],
  "auth": {
   "id": "sarvani-admin",
   "salt": "162716ba939ab18d22846fea",
