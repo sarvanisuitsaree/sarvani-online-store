@@ -37,13 +37,13 @@
  ],
  "auth": {
   "id": "uditjpr",
-  "salt": "9335fe8be7cb08048fa7d672",
+  "salt": "f33387d872e66b557326dc48",
   "iter": 10000,
-  "hash": "f357d979991100361726cd086700eaeeeb2a993cb7f80e4b6e0b77275b059f7a",
+  "hash": "494a536c736a261b8c6f0942ca41b54b56b1a31e22e6d617ef03e67111857b52",
   "tok": {
-   "s": "lfkoMyu8AwkBN+hr1gjdsg==",
-   "i": "feAgI0gCNBt0o7Eo",
-   "c": "ycn0eJRVUgxBOLzMAsJomOSLT3CrrhVFlCJdxNcA+lUiZq1Hdl1LNLEtZkkVbzGW1fB1uKuuHzlZBrMK02EBi8K3yF1CJcTIYcSWH4xOiRvnRI3QW45Wmj7tJfpi3fl7LYocOH58iv5971FZwQ==",
+   "s": "2j380lHekb5CWB5Fbp7jqA==",
+   "i": "KueYOpzeKlAIJSh2",
+   "c": "Pk0yKfX2wkPoh6NzIXl8y3w/6j2yK6tJ19xlsW0wXveHrDBF/SUPjy5oYqnOgrWvOABy5JOarVYFiqnUx+MIDNXEas8oUk1oKAwvEkSEFmu5gFVpGi6zx4coxni9PDOZJvTWu8Gl+RtnL7GGoQ==",
    "repo": "sarvanisuitsaree/sarvani-online-store",
    "branch": "main"
   }
