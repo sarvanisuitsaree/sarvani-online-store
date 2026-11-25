@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sarvani Suit & Saree – Murlipura, Jaipur</title>
-<meta name="description" content="Sarvani Suit & Saree, Murlipura, Jaipur – traditional and designer sarees, suits, lehariya prints, cotton and silk fabrics and blouses. Order on WhatsApp.">
-<meta property="og:title" content="Sarvani Suit & Saree – Jaipur">
-<meta property="og:description" content="Elegant suits and sarees. Order instantly on WhatsApp.">
+<title>Sarvani Suit and Saree – Murlipura, Jaipur</title>
+<meta name="description" content="Sarvani Suit and Saree, Murlipura, Jaipur – traditional and designer saree, suit, lehariya prints, cotton and silk fabrics and blouses. Order on WhatsApp.">
+<meta property="og:title" content="Sarvani Suit and Saree – Jaipur">
+<meta property="og:description" content="Elegant suit and saree. Order instantly on WhatsApp.">
 <meta property="og:type" content="website">
-<meta name="theme-color" content="#6b1d2f">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"ClothingStore","name":"Sarvani Suit & Saree","telephone":"+917976900021","foundingDate":"2015","address":{"@type":"PostalAddress","streetAddress":"Plot No. 9, Road Number 2, opposite VKI (Vishwakarma Industrial Area), Ram Nagar, Murlipura","addressLocality":"Jaipur","addressRegion":"Rajasthan","postalCode":"302039","addressCountry":"IN"}}</script>
+<meta name="theme-color" content="#fdfbf0">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ClothingStore","name":"Sarvani Suit and Saree","telephone":"+917976900021","foundingDate":"2017","address":{"@type":"PostalAddress","streetAddress":"Plot No. 9, Road Number 2, opposite VKI (Vishwakarma Industrial Area), Ram Nagar, Murlipura","addressLocality":"Jaipur","addressRegion":"Rajasthan","postalCode":"302039","addressCountry":"IN"}}</script>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%236b1d2f'/%3E%3Ctext x='32' y='44' font-size='36' text-anchor='middle' fill='%23e3c77f' font-family='Georgia,serif'%3ES%3C/text%3E%3C/svg%3E">
 <style>
 :root{
@@ -30,8 +30,8 @@ h1,h2,h3{font-family:var(--serif);font-weight:600;letter-spacing:.01em;line-heig
 /* header */
 header{position:sticky;top:0;z-index:50;background:rgba(251,247,240,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 .nav{display:flex;align-items:center;justify-content:space-between;height:72px;gap:16px}
-.logo{font-family:var(--serif);font-size:32px;letter-spacing:.22em;color:var(--maroon);text-decoration:none;font-weight:700;display:flex;flex-direction:column;line-height:1}
-.logo small{font-family:var(--sans);font-size:9px;letter-spacing:.42em;color:var(--gold);font-weight:600;margin-top:6px;padding-left:2px}
+.logo{font-family:var(--serif);font-size:32px;letter-spacing:.22em;color:var(--maroon);text-decoration:none;font-weight:700;display:flex;flex-direction:column;align-items:center;line-height:1}
+.logo small{font-family:var(--sans);font-size:9px;letter-spacing:.42em;color:var(--gold);font-weight:600;margin-top:6px;padding-left:.42em}
 nav.links{display:flex;gap:30px;align-items:center}
 nav.links a{text-decoration:none;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);opacity:.8;transition:.2s}
 nav.links a:hover{opacity:1;color:var(--maroon)}
@@ -207,6 +207,32 @@ body.is-admin .adminbar{display:block}
 .adminbar .wrap{display:flex;justify-content:space-between;align-items:center;padding:8px 0;gap:10px;flex-wrap:wrap}
 .adminbar button{color:var(--gold-l);text-transform:uppercase;letter-spacing:.14em;font-size:11px;margin-left:16px}
 .loading{text-align:center;padding:60px;color:var(--muted);grid-column:1/-1}
+/* ivory + bottle green theme (client request) */
+:root{--ivory:#fdfbf0;--cream:#f7f2dd;--blush:#f0ead2;--ink:#0f3a2c;--muted:#4b6b5d;--maroon:#0b4a36;--maroon-d:#06382a;--line:#e3dcbd}
+body{background:#fdfbf0;color:#0f3a2c}
+.hero{background:linear-gradient(135deg,#fffef7 0%,#faf5df 55%,#f2ead0 100%);color:#0b4a36;border-bottom:1px solid #e3d8a8}
+.hero::before{opacity:.5;background-image:radial-gradient(circle at 20% 30%,rgba(184,146,63,.45) 0 2px,transparent 3px),radial-gradient(circle at 80% 70%,rgba(184,146,63,.45) 0 2px,transparent 3px),repeating-conic-gradient(from 0deg at 50% 120%,transparent 0 8deg,rgba(184,146,63,.12) 8deg 9deg)}
+.hero .eyebrow{color:#8a6a1f}
+.hero h1{color:#0b4a36;display:flex;flex-direction:column;align-items:center;line-height:1.05}
+.hero h1 .hn{font-size:clamp(56px,11vw,120px);letter-spacing:.14em;padding-left:.14em;font-weight:600}
+.hero h1 .hs{font-size:clamp(17px,2.8vw,30px);letter-spacing:.38em;padding-left:.38em;margin-top:14px;text-transform:uppercase;font-style:normal;font-weight:500;color:#8a6a1f}
+.hero p{color:#1d4a3a;opacity:1;font-weight:400}
+.hero .orn{color:#b8923f}
+.hero .orn i{background:linear-gradient(90deg,transparent,#b8923f)}
+.hero .btn-gold{background:#0b4a36;color:#fffdf2}
+.hero .btn-gold:hover{background:#06382a;color:#fff}
+.hero .btn-line{border:1px solid #0b4a36;color:#0b4a36}
+.hero .btn-line:hover{background:#0b4a36;color:#fffdf2}
+.strip{background:#f7f2dd;border-bottom:1px solid #e3dcbd}
+footer{background:#f7f2dd;color:#1d4a3a;border-top:1px solid #e3d8a8}
+footer .logo{color:#0b4a36}
+footer a{color:#0b4a36}
+.logo img{height:50px;width:auto;max-width:220px;object-fit:contain;display:block}
+footer .logo img{height:58px}
+.logobox{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin-bottom:6px;background:#fffef8}
+.logobox #logoPrev{min-height:56px;display:flex;align-items:center;margin:6px 0 10px}
+.logobox #logoPrev img{max-height:70px;max-width:240px;object-fit:contain}
+.logobox .logobtns{margin-top:8px}
 </style>
 </head>
 <body>
@@ -215,7 +241,7 @@ body.is-admin .adminbar{display:block}
 
 <header>
   <div class="wrap nav">
-    <a class="logo" href="#top">SARVANI<small>SUITS · SAREES</small></a>
+    <a class="logo" href="#top" id="logoTop">SARVANI<small>SUIT AND SAREE</small></a>
     <nav class="links" id="links">
       <a href="#collection">Collection</a>
       <a href="#about">Our Story</a>
@@ -229,8 +255,8 @@ body.is-admin .adminbar{display:block}
 <main id="top">
 <div class="hero">
   <div class="wrap">
-    <div class="eyebrow">Since 2015 · Murlipura, Jaipur</div>
-    <h1>Sarvani <em>Suits &amp; Sarees</em></h1>
+    <div class="eyebrow">Since 2017 · Murlipura, Jaipur</div>
+    <h1><span class="hn">Sarvani</span><em class="hs">Suit and Saree</em></h1>
     <div class="orn"><i></i><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.6L22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4z"/></svg><i></i></div>
     <p id="tagline">Timeless Indian elegance, chosen with love for every occasion.</p>
     <div class="cta">
@@ -241,7 +267,7 @@ body.is-admin .adminbar{display:block}
 </div>
 
 <div class="strip"><div class="wrap">
-  <div><b>Sarees &amp; Suits</b>Traditional &amp; designer ethnic wear</div>
+  <div><b>Saree and Suit</b>Traditional &amp; designer ethnic wear</div>
   <div><b>Lehariya, Cotton &amp; Silk</b>Fabrics, prints &amp; blouses</div>
   <div><b>Order on WhatsApp</b>Quick, personal &amp; easy</div>
 </div></div>
@@ -258,7 +284,7 @@ body.is-admin .adminbar{display:block}
   <div class="wrap">
     <div class="sec-head" style="margin-bottom:0"><div class="eyebrow">Our Story</div><h2>The Sarvani Promise</h2></div>
     <p id="aboutText"></p>
-    <div class="offer"><span>Sarees</span><span>Suits</span><span>Lehariya Prints</span><span>Cotton Fabrics</span><span>Silk Fabrics</span><span>Blouses</span></div>
+    <div class="offer"><span>Saree</span><span>Suit</span><span>Lehariya Prints</span><span>Cotton Fabrics</span><span>Silk Fabrics</span><span>Blouses</span></div>
   </div>
 </section>
 
@@ -276,8 +302,8 @@ body.is-admin .adminbar{display:block}
 
 <footer>
   <div class="wrap">
-    <span class="logo">SARVANI</span>
-    <p>Suits &amp; Sarees · Murlipura, Jaipur</p>
+    <span class="logo" id="logoFoot">SARVANI</span>
+    <p>Suit and Saree · Murlipura, Jaipur</p>
     <p id="igLine"></p>
     <p>© <span id="yr"></span> Sarvani. All rights reserved.</p>
     <button id="footAdmin">Admin</button>
@@ -343,6 +369,7 @@ body.is-admin .adminbar{display:block}
 
   <div id="tab-settings" hidden>
     <form id="setForm">
+      <div class="logobox"><label class="f" style="margin-top:0">Shop logo</label><div id="logoPrev"></div><input type="file" id="logoFile" accept="image/*"><div class="note" style="margin-top:6px">Choose a picture (PNG with a clear background looks best). It is saved and shown on your website straight away.</div><div class="logobtns"><button type="button" class="btn btn-ghost btn-sm" id="logoRemove">Remove logo picture (use text)</button></div><div class="err" id="logoErr" style="text-align:left"></div><label class="f">Text logo: name</label><input type="text" id="sLogoText" maxlength="30" placeholder="SARVANI"><label class="f">Text logo: line below</label><input type="text" id="sLogoSub" maxlength="40" placeholder="SUIT AND SAREE"><div class="note" style="margin-top:6px">The text is used when no logo picture is set. Press Save Settings to save the text.</div></div>
       <label class="f">WhatsApp number (orders come here)</label><input type="text" id="sWa" inputmode="tel" placeholder="e.g. 9876543210">
       <label class="f">Homepage tagline</label><input type="text" id="sTag" maxlength="160">
       <label class="f">About the shop</label><textarea id="sAbout" maxlength="800"></textarea>
@@ -402,7 +429,7 @@ body.is-admin .adminbar{display:block}
 <div class="ov" id="ovConfirm"><div class="modal login" style="width:min(380px,100%)"><button class="x" data-close>×</button><p id="cfMsg" style="text-align:center;margin:18px 0 22px;font-size:16px"></p><div class="formbar" style="justify-content:center;margin-top:0"><button type="button" class="btn btn-ghost btn-sm" id="cfNo">Cancel</button><button type="button" class="btn btn-danger btn-sm" id="cfYes">Delete</button></div></div></div>
 <div class="toast" id="toast"></div>
 
-<script id="sarvani-data" type="application/json">{"v": 1, "settings": {"whatsapp": "917976900021", "tagline": "Timeless Indian elegance, chosen with love for every occasion.", "about": "Established in 2015 in Murlipura, Jaipur, Sarvani Suit & Saree brings you traditional and designer ethnic wear: sarees, suits, lehariya prints, cotton and silk fabrics, and blouses for every occasion.", "address": "Plot No. 9, Road Number 2, opposite VKI (Vishwakarma Industrial Area), Ram Nagar, Murlipura, Jaipur, Rajasthan 302039", "hours": "", "instagram": "https://instagram.com/sarvani_jaipur", "repo": "", "branch": ""}, "categories": ["Suits", "Sarees", "Blouses", "Fabrics", "Other"], "products": [], "auth": {"id": "sarvani-admin", "salt": "37c09611646831363dc95769", "iter": 10000, "hash": "275f7baa972ff70e2a8c24d29f14b32cf12c2223f308e4d28ee4050bdae6b614"}}</script>
+<script id="sarvani-data" type="application/json">{"v": 1, "settings": {"whatsapp": "917976900021", "tagline": "Timeless Indian elegance, chosen with love for every occasion.", "about": "Established in 2017 in Murlipura, Jaipur, Sarvani Suit and Saree brings you traditional and designer ethnic wear: saree, suit, lehariya prints, cotton and silk fabrics, and blouses for every occasion.", "address": "Plot No. 9, Road Number 2, opposite VKI (Vishwakarma Industrial Area), Ram Nagar, Murlipura, Jaipur, Rajasthan 302039", "hours": "", "instagram": "https://instagram.com/sarvani_jaipur", "repo": "", "branch": ""}, "categories": ["Suit", "Saree", "Blouses", "Fabrics", "Other"], "products": [], "auth": {"id": "sarvani-admin", "salt": "e6fccd0846a1128bfe4a31ba", "iter": 10000, "hash": "165345b70c9943ddcd7f6659db6c186f3d9178b79f9330236ee349cc859a1c89"}}</script>
 <script>
 (function(){
 'use strict';
@@ -420,8 +447,12 @@ function imgT(n){return 'img/'+encodeURIComponent(n)+'_t.jpg'}
    The admin saves every change as ONE commit straight into the GitHub repository (Git Data API),
    using a fine-grained token that is stored only on the admin's own device, locked with the admin password. */
 var GHAPI='https://api.github.com';
-var DEFCATS=['Suits','Sarees','Blouses','Fabrics','Other'];
+var DEFCATS=['Suit','Saree','Blouses','Fabrics','Other'];
 function norm(d){
+  var CM={'Suits':'Suit','Sarees':'Saree','Sari':'Saree'};
+  if(Array.isArray(d.categories)){var seen={};d.categories=d.categories.map(function(c){return CM[c]||c}).filter(function(c){if(seen[c])return false;seen[c]=1;return true})}
+  if(Array.isArray(d.products))d.products.forEach(function(p){if(p&&CM[p.category])p.category=CM[p.category]});
+  if(d.settings&&typeof d.settings.about==='string')d.settings.about=d.settings.about.replace('Established in 2015','Established in 2017').replace('Sarvani Suit & S'+'aree','Sarvani Suit and Saree').replace('sarees, suits,','sari, suit,').replace('Suit and Sari','Suit and Saree').replace('sari, suit,','saree, suit,').replace(' Sari ',' Saree ');
   if(!Array.isArray(d.categories)||!d.categories.length)d.categories=DEFCATS.slice();
   d.settings=d.settings||{};if(typeof d.settings.repo!=='string')d.settings.repo='';if(typeof d.settings.branch!=='string')d.settings.branch='';
   d.products=Array.isArray(d.products)?d.products:[];return d;
@@ -539,6 +570,12 @@ async function ghDelete(paths){
     await gh('PATCH',R+'/git/refs/heads/'+GH.branch,{sha:nc.sha,force:false});
   }catch(e){}
 }
+function logoBlob(f){return new Promise(function(res,rej){
+  var u=URL.createObjectURL(f),im=new Image();
+  im.onload=function(){var w=im.naturalWidth||im.width||300,h=im.naturalHeight||im.height||100,m=600,r=Math.min(1,m/Math.max(w,h));
+    var c=document.createElement('canvas');c.width=Math.max(1,Math.round(w*r));c.height=Math.max(1,Math.round(h*r));c.getContext('2d').drawImage(im,0,0,c.width,c.height);URL.revokeObjectURL(u);
+    c.toBlob(function(bl){bl?res(bl):rej(bad('Could not prepare the logo.'))},'image/png')};
+  im.onerror=function(){URL.revokeObjectURL(u);rej(bad('Could not read that picture. Use PNG, JPG or SVG.'))};im.src=u})}
 function delPhotos(names){var p=[];names.forEach(function(n){p.push('img/'+n+'.jpg','img/'+n+'_t.jpg')});serial(function(){return ghDelete(p)})}
 
 async function doConnect(repoIn,tokIn){
@@ -670,9 +707,19 @@ async function backend(action,b){
     var wa=String(b.whatsapp||'').replace(/\D/g,'');if(wa.length===10)wa='91'+wa;
     if(wa.length<11||wa.length>15)throw bad('Enter a valid WhatsApp number (10 digits, or with country code).');
     var ig=ctext(b.instagram,200);if(ig&&!/^https?:\/\//i.test(ig))ig='https://instagram.com/'+ig.replace(/^[@\/]+/,'');
-    var nset={whatsapp:wa,tagline:ctext(b.tagline,160),about:ctext(b.about,800),address:ctext(b.address,250),hours:ctext(b.hours,120),instagram:ig};
+    var nset={logoText:ctext(b.logoText,30),logoSub:ctext(b.logoSub,40),whatsapp:wa,tagline:ctext(b.tagline,160),about:ctext(b.about,800),address:ctext(b.address,250),hours:ctext(b.hours,120),instagram:ig};
     var nd2=await serial(function(){return ghCommit('Update shop settings',function(nd){nd.settings=Object.assign({},nd.settings,nset);return nd},[])});
     return {ok:true,settings:nd2.settings};
+  }
+  if(action==='save_logo'){
+    var lf=b.file,lremove=!!b.remove,lfiles=[],lname='',oldl='';
+    if(lf){
+      if(String(lf.type).indexOf('image/')!==0)throw bad('Please choose a picture (PNG, JPG or SVG).');
+      var lbl=await logoBlob(lf);lname='logo-'+rid()+'.png';lfiles.push({path:'img/'+lname,b64:await blobB64(lbl)});
+    }else if(!lremove)throw bad('Choose a picture first.');
+    var nl=await serial(function(){return ghCommit(lf?'Update logo':'Remove logo',function(nd){oldl=nd.settings.logo||'';nd.settings.logo=lf?lname:'';return nd},lfiles)});
+    if(oldl&&oldl!==lname)serial(function(){return ghDelete(['img/'+oldl])});
+    return {ok:true,settings:nl.settings};
   }
   if(action==='add_category'){
     var cn=ctext(b.name,30);if(!cn)throw bad('Please type the category name.');
@@ -760,6 +807,19 @@ $('#catList').onclick=async function(e){var b=e.target.closest('[data-delcat]');
 
 
 $('#ghTest').onclick=async function(){var b=this,o=$('#ghTestOut');b.disabled=true;o.textContent='Checking…';try{var r=await api('diagnose',{body:{}});o.innerHTML=r.out.map(function(x){return '<div style="color:'+(x.ok?'#117a3d':'#b3261e')+'">'+(x.ok?'✓ ':'✗ ')+esc(x.t)+'</div>'}).join('')}catch(e){o.textContent=e.message}b.disabled=false};
+
+function applyLogo(){
+  var s=S.settings||{},t=s.logoText||'SARVANI',u=(s.logoSub===undefined||s.logoSub===null||s.logoSub==='')?'SUIT AND SAREE':s.logoSub,top=$('#logoTop'),ft=$('#logoFoot');
+  if(!top||!ft)return;
+  if(s.logo){var im='<img src="img/'+encodeURIComponent(s.logo)+'" alt="'+esc(t)+'">';top.innerHTML=im;ft.innerHTML=im}
+  else{top.innerHTML=esc(t)+'<small>'+esc(u)+'</small>';ft.textContent=t}
+}
+function renderLogoPrev(){var p=$('#logoPrev'),s=S.settings||{};if(!p)return;p.innerHTML=s.logo?'<img src="img/'+encodeURIComponent(s.logo)+'" alt="logo">':'<span style="color:var(--muted);font-size:13px">No logo picture yet (the text logo is shown).</span>';$('#logoRemove').hidden=!s.logo}
+$('#logoFile').onchange=async function(){
+  var f=this.files[0];this.value='';if(!f)return;$('#logoErr').textContent='Uploading…';
+  try{var r=await api('save_logo',{body:{file:f}});S.settings=r.settings;applySettings();renderLogoPrev();$('#logoErr').textContent='';toast('Logo updated ✓')}catch(e){$('#logoErr').textContent=e.message}
+};
+$('#logoRemove').onclick=async function(){$('#logoErr').textContent='';try{var r=await api('save_logo',{body:{remove:true}});S.settings=r.settings;applySettings();renderLogoPrev();toast('Logo picture removed')}catch(e){$('#logoErr').textContent=e.message}};
 /* ---------- WhatsApp ---------- */
 function waLink(text){return 'https://wa.me/'+S.settings.whatsapp+'?text='+encodeURIComponent(text)}
 function orderMsg(p,size){
@@ -773,14 +833,14 @@ function orderMsg(p,size){
 function openWa(text){window.open(waLink(text),'_blank','noopener')}
 function bindGeneral(){
   $$('[data-wa-general]').forEach(function(a){
-    a.href=waLink('Namaste Sarvani 🙏 I would like to know more about your suits and sarees.');
+    a.href=waLink('Namaste Sarvani 🙏 I would like to know more about your suit and saree.');
     a.target='_blank';a.rel='noopener';
   });
 }
 
 /* ---------- render public ---------- */
 function applySettings(){
-  var s=S.settings;
+  var s=S.settings;applyLogo();
   $('#tagline').textContent=s.tagline||'';
   $('#aboutText').textContent=s.about||'';
   $('#hoursText').textContent=s.hours||'Message us on WhatsApp for our store timings.';
@@ -951,7 +1011,7 @@ $('#fileIn').onchange=async function(){
 
 function newProduct(silent){
   S.form={sizes:[],items:[],dirty:false};
-  $('#pId').value='';$('#pName').value='';$('#pCat').value=(S.categories&&S.categories[0])||'Suits';$('#pPrice').value='';$('#pStock').value='1';$('#pDesc').value='';$('#prodErr').textContent='';
+  $('#pId').value='';$('#pName').value='';$('#pCat').value=(S.categories&&S.categories[0])||'Suit';$('#pPrice').value='';$('#pStock').value='1';$('#pDesc').value='';$('#prodErr').textContent='';
   $('#prodSave').textContent='Save Product';
   renderSizes();renderPhotos();
 }
@@ -995,12 +1055,12 @@ async function delProduct(p){
 
 function fillSettings(){
   var s=S.settings;$('#sWa').value=s.whatsapp||'';$('#sTag').value=s.tagline||'';$('#sAbout').value=s.about||'';
-  $('#sAddr').value=s.address||'';$('#sHours').value=s.hours||'';$('#sIg').value=s.instagram||'';$('#setErr').textContent='';
+  $('#sAddr').value=s.address||'';$('#sLogoText').value=s.logoText||'';$('#sLogoSub').value=s.logoSub||'';renderLogoPrev();$('#sHours').value=s.hours||'';$('#sIg').value=s.instagram||'';$('#setErr').textContent='';
 }
 $('#setForm').onsubmit=async function(e){
   e.preventDefault();$('#setErr').textContent='';
   try{
-    var r=await api('save_settings',{body:{whatsapp:$('#sWa').value,tagline:$('#sTag').value,about:$('#sAbout').value,address:$('#sAddr').value,hours:$('#sHours').value,instagram:$('#sIg').value}});
+    var r=await api('save_settings',{body:{whatsapp:$('#sWa').value,tagline:$('#sTag').value,about:$('#sAbout').value,address:$('#sAddr').value,hours:$('#sHours').value,instagram:$('#sIg').value,logoText:$('#sLogoText').value,logoSub:$('#sLogoSub').value}});
     S.settings=r.settings;applySettings();fillSettings();toast('Settings saved ✓');
   }catch(err){$('#setErr').textContent=err.message}
 };
